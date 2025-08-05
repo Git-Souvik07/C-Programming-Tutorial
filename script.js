@@ -5,15 +5,14 @@ const sidebarToggle=document.querySelector('.sidebar-toggle');
         const themeToggle=document.getElementById('theme-toggle');
         const body=document.body;
 
-        // Sidebar toggle
         sidebarToggle.addEventListener('click',()=>sidebar.classList.toggle('open'));
-        // Close sidebar on outside click
+
         document.addEventListener('click',e=>{
             if(window.innerWidth<=1024 && !sidebar.contains(e.target) && !sidebarToggle.contains(e.target)){
                 sidebar.classList.remove('open');
             }
         });
-        // Active link on scroll
+
         function updateActiveSection(){
             const pos=window.scrollY+100;
             sections.forEach(sec=>{
@@ -24,7 +23,7 @@ const sidebarToggle=document.querySelector('.sidebar-toggle');
             });
         }
         window.addEventListener('scroll',updateActiveSection);
-        // Smooth scroll
+
         sidebarLinks.forEach(link=>{
             link.addEventListener('click',e=>{
                 e.preventDefault();
@@ -32,12 +31,12 @@ const sidebarToggle=document.querySelector('.sidebar-toggle');
                 if(window.innerWidth<=1024) sidebar.classList.remove('open');
             });
         });
-        // Theme toggle
+    
         themeToggle.addEventListener('click',()=>{
             body.classList.toggle('dark-theme');
             themeToggle.textContent=body.classList.contains('dark-theme')?'☀ Light Mode':'🌙 Dark Mode';
         });
-        // Copy buttons
+  
         document.querySelectorAll('.copy-btn').forEach(btn=>{
             btn.addEventListener('click',()=>{
                 navigator.clipboard.writeText(btn.nextElementSibling.textContent);
