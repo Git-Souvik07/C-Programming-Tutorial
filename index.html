@@ -10,6 +10,7 @@
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdhO0Sa8KFwTqE7kclLjyDdNHZTEUw_iKYeA&s">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code&display=swap"
         rel="stylesheet">
+        
 </head>
 
 <body>
@@ -24,7 +25,9 @@
         <a href="#intro" data-section="intro"> Introduction</a>
         <a href="#syntax" data-section="syntax"> Program Structure</a>
         <a href="#charset" data-section="charset"> Character Set</a>
-        <a href="#datatypes" data-section="datatypes"> Data Types</a>
+        <a href="#variables" data-section="variables"> Variables</a>
+       <a href="#datatypes" data-section="datatypes"> Data Types</a> 
+       <a href="#constants" data-section="constants"> Constants </a>
         <a href="#control" data-section="control"> Control Statements</a>
         <a href="#functions" data-section="functions"> Functions</a>
         <a href="#arrays" data-section="arrays"> Arrays</a>
@@ -148,6 +151,49 @@ ASCII value of 'A': 65
 </code></pre>
     <p><b>Historical Note:</b> C’s character set, rooted in ASCII, was chosen in the 1970s for simplicity and compatibility with early UNIX systems. The C89 standard formalized ASCII as the default, while C99 introduced support for extended character sets to accommodate internationalization, reflecting C’s evolution to modern needs by 2025.</p>
 </section>
+<section id="variables">
+    <h2> Variables <span class="progress-check">✔</span></h2>
+    <p>In C, a <b>variable</b> is a named storage location in memory used to hold data that can be modified during program execution. Variables must be declared with a specific data type before use, reflecting C’s structured and type-safe design, established in 1972 by Dennis Ritchie for UNIX development. Variables are fundamental to manipulating data, such as numbers, characters, or user input.</p>
+    <p><b>Key Rules for Variables:</b></p>
+    <ul>
+        <li><b>Declaration:</b> Specify the data type and name (e.g., <code>int age;</code>).</li>
+        <li><b>Initialization:</b> Assign a value at declaration (e.g., <code>int age = 20;</code>) or later.</li>
+        <li><b>Naming:</b> Use letters, digits, or underscores; start with a letter or underscore; case-sensitive (e.g., <code>Age</code> ≠ <code>age</code>).</li>
+        <li><b>Scope:</b> Variables have local (within a function/block) or global (outside functions) scope.</li>
+        <li><b>Storage Classes:</b> Modifiers like <code>auto</code>, <code>register</code>, <code>static</code>, or <code>extern</code> control lifetime and visibility.</li>
+    </ul>
+    <p><b>Note:</b> C’s variable declaration syntax, formalized in the C89 standard, ensures type safety and efficient memory use. Variable sizes depend on data types (e.g., <code>int</code> is typically 4 bytes on 64-bit systems).</p> <br>
+    <div class="code-title">Variables Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int global_var = 100; // Global variable
+
+int main() {
+    int age = 20;        // Local variable
+    float salary = 2500.50;
+    char grade = 'B';
+    static int counter = 0; // Static variable retains value between calls
+
+    counter++;
+    printf("Global variable: %d\n", global_var);
+    printf("Local variable (age): %d\n", age);
+    printf("Local variable (salary): %.2f\n", salary);
+    printf("Local variable (grade): %c\n", grade);
+    printf("Static variable (counter): %d\n", counter);
+
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Global variable: 100
+Local variable (age): 20
+Local variable (salary): 2500.50
+Local variable (grade): B
+Static variable (counter): 1
+</code></pre> <br>
+    <p><b>Historical Note:</b> C’s variable system, introduced in the 1970s, allowed fine-grained control over memory, key for UNIX’s portability. The C89 standard formalized declarations, while C99 added features like variable-length arrays, enhancing flexibility for modern applications in 2025.</p>
+</section>
+
 
         <section id="datatypes">
     <h2> Data Types in C <span class="progress-check">✔</span></h2>
@@ -186,6 +232,54 @@ Character (char): A, Size: 1 byte
 Boolean (_Bool): 1, Size: 1 byte
 </code></pre> <br>
     <p><b>Note:</b> C’s data types, formalized in the C89 standard, are designed for portability and performance. The <code>sizeof</code> operator reveals type sizes, which may differ across systems, reflecting C’s hardware-dependent roots from its creation in 1972 for UNIX development.</p>
+</section>
+
+
+
+<section id="constants">
+    <h2> Constants <span class="progress-check">✔</span></h2>
+    <p>In C, a <b>constant</b> is a value that cannot be modified during program execution. Constants are used to define fixed values, such as mathematical constants or configuration settings, ensuring code reliability and readability. Introduced in C’s design in 1972 by Dennis Ritchie for UNIX, constants leverage C’s type system to provide immutable data, formalized in the C89 standard.</p>
+    <p><b>Types of Constants:</b></p>
+    <ul>
+        <li><b>Literal Constants:</b> Fixed values like integers (e.g., <code>42</code>), floating-point numbers (e.g., <code>3.14</code>), characters (e.g., <code>'A'</code>), or strings (e.g., <code>"Hello"</code>).</li>
+        <li><b>Const Keyword:</b> Variables declared with <code>const</code> cannot be modified (e.g., <code>const int MAX = 100;</code>).</li>
+        <li><b>#define Preprocessor:</b> Defines symbolic constants via macros (e.g., <code>#define PI 3.14</code>).</li>
+        <li><b>Enumeration Constants:</b> Named integer constants using <code>enum</code> (e.g., <code>enum { RED = 1, GREEN, BLUE };</code>).</li>
+    </ul>
+    <p><b>Note:</b> Constants enhance code clarity and prevent accidental changes. The <code>const</code> keyword, introduced in C89, ensures type safety, while <code>#define</code> is a legacy approach from C’s early days. Use <code>const</code> for type-checked constants in modern C (2025).</p>
+    <br><div class="code-title">Constants Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+#define PI 3.14159 // Preprocessor constant
+
+int main() {
+    const int MAX_AGE = 150; // Const variable
+    enum colors { RED = 1, GREEN, BLUE }; // Enumeration constants
+    
+    printf("Literal Integer: %d\n", 42);
+    printf("Literal Float: %.2f\n", 2.718);
+    printf("Literal Character: %c\n", 'X');
+    printf("Literal String: %s\n", "Hello, C!");
+    printf("Const Variable (MAX_AGE): %d\n", MAX_AGE);
+    printf("Preprocessor Constant (PI): %.5f\n", PI);
+    printf("Enum Constant (GREEN): %d\n", GREEN);
+    
+    // MAX_AGE = 200; // Error: cannot modify const
+    // PI = 3.14; // Error: PI is a preprocessor constant
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Literal Integer: 42
+Literal Float: 2.72
+Literal Character: X
+Literal String: Hello, C!
+Const Variable (MAX_AGE): 150
+Preprocessor Constant (PI): 3.14159
+Enum Constant (GREEN): 2
+</code></pre>
+    <br><p><b>Historical Note:</b> Constants in C, rooted in its 1972 design, provided fixed values for UNIX system programming. The C89 standard introduced <code>const</code> for type-safe immutability, while C99 and later standards enhanced enumeration support, ensuring constants remain vital for reliable code in 2025.</p>
 </section>
 
         <section id="control">
