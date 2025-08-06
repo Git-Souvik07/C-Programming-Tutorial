@@ -64,3 +64,14 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
 });
 
 updateActiveSection();
+
+document.querySelectorAll('.sidebar-title').forEach(title => {
+    title.addEventListener('click', () => {
+        const links = title.nextElementSibling;
+
+        // Toggle open class for animation
+        links.classList.toggle('open');
+        title.classList.toggle('collapsed');
+    });
+});
+
