@@ -158,7 +158,12 @@
      border-left: 4px solid var(--sidebar-active-border);
      font-weight: 600;
  }
-
+.sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #006a97;
+}
  main {
      margin-left: 280px;
      padding: 2rem;

@@ -10,7 +10,7 @@
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdhO0Sa8KFwTqE7kclLjyDdNHZTEUw_iKYeA&s">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code&display=swap"
         rel="stylesheet">
-        
+
 </head>
 
 <body>
@@ -22,23 +22,31 @@
 
     <button class="sidebar-toggle" aria-label="Toggle sidebar navigation">☰ Menu</button>
     <nav class="sidebar" role="navigation" aria-label="Main navigation">
+        
+        <div class="sidebar-title"> C Tutorial</div>
         <a href="#intro" data-section="intro"> Introduction</a>
         <a href="#syntax" data-section="syntax"> Program Structure</a>
         <a href="#charset" data-section="charset"> Character Set</a>
         <a href="#variables" data-section="variables"> Variables</a>
-       <a href="#datatypes" data-section="datatypes"> Data Types</a> 
-       <a href="#constants" data-section="constants"> Constants </a>
-       <a href="#operators" data-section="operators"> Operators</a>
-       <a href="#boolean" data-section="boolean"> Boolean</a>
-      <a href="#switch" data-section="switch"> Switch Statement</a>
-    <a href="#whileloop" data-section="whileloop"> While Loop</a>
-    <a href="#forloop" data-section="forloop"> For Loop</a>
-    <a href="#breakcontinue" data-section="breakcontinue"> Break and Continue</a>
-    <a href="#strings" data-section="strings"> Strings</a>
-    <a href="#userinput" data-section="userinput"> User Input</a>
-    <a href="#memoryaddress" data-section="memoryaddress"> Memory Address</a>
-    <a href="#arrays" data-section="arrays"> Arrays</a>
-    <a href="#pointers" data-section="pointers"> Pointers</a>
+        <a href="#datatypes" data-section="datatypes"> Data Types</a>
+        <a href="#constants" data-section="constants"> Constants </a>
+        <a href="#operators" data-section="operators"> Operators</a>
+        <a href="#boolean" data-section="boolean"> Boolean</a>
+        <a href="#switch" data-section="switch"> Switch Statement</a>
+        <a href="#whileloop" data-section="whileloop"> While Loop</a>
+        <a href="#forloop" data-section="forloop"> For Loop</a>
+        <a href="#breakcontinue" data-section="breakcontinue"> Break and Continue</a>
+        <a href="#strings" data-section="strings"> Strings</a>
+        <a href="#userinput" data-section="userinput"> User Input</a>
+        <a href="#memoryaddress" data-section="memoryaddress"> Memory Address</a>
+        <a href="#arrays" data-section="arrays"> Arrays</a>
+        <a href="#pointers" data-section="pointers"> Pointers</a>
+        <div class="sidebar-title"> C Function </div>
+        <a href="#functions" data-section="functions"> Functions</a>
+        <a href="#functionparameters" data-section="functionparameters"> Function Parameters</a>
+        <a href="#scope" data-section="scope"> Scope</a>
+        <a href="#recursion" data-section="recursion"> Recursion</a>
+       <a href="#mathfunctions" data-section="mathfunctions">5.5. Math Functions</a>
 
     </nav>
 
@@ -99,38 +107,49 @@ int main() {
     printf("Hello, World!\n");
     return 0;
 }
-// Output: Hello, World!</code></pre><br
-            <ul>
-              <h5>  <li>#include &lt;stdio.h&gt: Imports input/output functions.</li>
+// Output: Hello, World!</code></pre><br <ul>
+            <h5>
+                <li>#include &lt;stdio.h&gt: Imports input/output functions.</li>
                 <li>int main(): Program’s entry point.</li>
                 <li>printf: Outputs text to the console.</li>
                 <li> return 0: Indicates successful execution</li>
-                </h5>
+            </h5>
             </ul>
             <br>
             <h3>Installation :</h3>
-            <p>If you want to run C program download DEV-C sofware or if you want to run on vs code editor then 
+            <p>If you want to run C program download DEV-C sofware or if you want to run on vs code editor then
                 download minGw compailer and set it up in your vs code editor.
             </p><br>
             <h3>Download links :</h3>
             <p>Download link for DEV C : <a href="https://www.bloodshed.net/"> DEV C++</a>.</p>
-            <p>download link for minGw and vs code editor : <a href="https://sourceforge.net/projects/mingw/">minGw</a> and <a href="https://code.visualstudio.com/">Vs Code</a>.</p>
+            <p>download link for minGw and vs code editor : <a href="https://sourceforge.net/projects/mingw/">minGw</a>
+                and <a href="https://code.visualstudio.com/">Vs Code</a>.</p>
         </section>
 
         <section id="charset">
-    <h2> Character Set <span class="progress-check">✔</span></h2>
-    <p>The C programming language uses a defined <b>character set</b> to represent source code and data. A character set is the collection of valid characters that C programs can use in identifiers, strings, and character constants. C’s character set is primarily based on the ASCII standard, which has been consistent since C’s creation in 1972 for UNIX development, ensuring portability across systems.</p>
-    <p><b>Components of the C Character Set:</b></p>
-    <ul>
-        <li><b>Letters:</b> Uppercase (A-Z) and lowercase (a-z) for identifiers (e.g., variable names).</li>
-        <li><b>Digits:</b> 0-9 for numeric constants.</li>
-        <li><b>Special Characters:</b> Symbols like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>&</code>, <code>|</code>, <code>!</code>, etc., for operators and punctuation.</li>
-        <li><b>White Spaces:</b> Spaces, tabs (\t), newlines (\n), and carriage returns (\r) for formatting.</li>
-        <li><b>Escape Sequences:</b> Special characters like <code>\n</code> (newline), <code>\t</code> (tab), <code>\'</code> (single quote), and <code>\"</code> (double quote) for use in strings and character literals.</li>
-    </ul>
-    <p><b>Note:</b> C uses the <code>char</code> data type to store characters, typically as 1-byte ASCII values (0 to 127 for signed, 0 to 255 for unsigned). Since the C99 standard, C also supports extended character sets like Unicode via wide characters (<code>wchar_t</code>).</p>
-    <div class="code-title">Character Set Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+            <h2> Character Set <span class="progress-check">✔</span></h2>
+            <p>The C programming language uses a defined <b>character set</b> to represent source code and data. A
+                character set is the collection of valid characters that C programs can use in identifiers, strings, and
+                character constants. C’s character set is primarily based on the ASCII standard, which has been
+                consistent since C’s creation in 1972 for UNIX development, ensuring portability across systems.</p>
+            <p><b>Components of the C Character Set:</b></p>
+            <ul>
+                <li><b>Letters:</b> Uppercase (A-Z) and lowercase (a-z) for identifiers (e.g., variable names).</li>
+                <li><b>Digits:</b> 0-9 for numeric constants.</li>
+                <li><b>Special Characters:</b> Symbols like <code>+</code>, <code>-</code>, <code>*</code>,
+                    <code>/</code>, <code>%</code>, <code>&</code>, <code>|</code>, <code>!</code>, etc., for operators
+                    and punctuation.</li>
+                <li><b>White Spaces:</b> Spaces, tabs (\t), newlines (\n), and carriage returns (\r) for formatting.
+                </li>
+                <li><b>Escape Sequences:</b> Special characters like <code>\n</code> (newline), <code>\t</code> (tab),
+                    <code>\'</code> (single quote), and <code>\"</code> (double quote) for use in strings and character
+                    literals.</li>
+            </ul>
+            <p><b>Note:</b> C uses the <code>char</code> data type to store characters, typically as 1-byte ASCII values
+                (0 to 127 for signed, 0 to 255 for unsigned). Since the C99 standard, C also supports extended character
+                sets like Unicode via wide characters (<code>wchar_t</code>).</p>
+            <div class="code-title">Character Set Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     char letter = 'A';
@@ -147,30 +166,42 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>Letter: A
+            <p><b>Output:</b></p>
+            <pre><code>Letter: A
 Digit: 5
 Symbol: #
 Escape Sequence (newline): 
 Hello after newline
 ASCII value of 'A': 65
 </code></pre>
-    <p><b>Historical Note:</b> C’s character set, rooted in ASCII, was chosen in the 1970s for simplicity and compatibility with early UNIX systems. The C89 standard formalized ASCII as the default, while C99 introduced support for extended character sets to accommodate internationalization, reflecting C’s evolution to modern needs by 2025.</p>
-</section>
-<section id="variables">
-    <h2> Variables <span class="progress-check">✔</span></h2>
-    <p>In C, a <b>variable</b> is a named storage location in memory used to hold data that can be modified during program execution. Variables must be declared with a specific data type before use, reflecting C’s structured and type-safe design, established in 1972 by Dennis Ritchie for UNIX development. Variables are fundamental to manipulating data, such as numbers, characters, or user input.</p>
-    <p><b>Key Rules for Variables:</b></p>
-    <ul>
-        <li><b>Declaration:</b> Specify the data type and name (e.g., <code>int age;</code>).</li>
-        <li><b>Initialization:</b> Assign a value at declaration (e.g., <code>int age = 20;</code>) or later.</li>
-        <li><b>Naming:</b> Use letters, digits, or underscores; start with a letter or underscore; case-sensitive (e.g., <code>Age</code> ≠ <code>age</code>).</li>
-        <li><b>Scope:</b> Variables have local (within a function/block) or global (outside functions) scope.</li>
-        <li><b>Storage Classes:</b> Modifiers like <code>auto</code>, <code>register</code>, <code>static</code>, or <code>extern</code> control lifetime and visibility.</li>
-    </ul>
-    <p><b>Note:</b> C’s variable declaration syntax, formalized in the C89 standard, ensures type safety and efficient memory use. Variable sizes depend on data types (e.g., <code>int</code> is typically 4 bytes on 64-bit systems).</p> <br>
-    <div class="code-title">Variables Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+            <p><b>Historical Note:</b> C’s character set, rooted in ASCII, was chosen in the 1970s for simplicity and
+                compatibility with early UNIX systems. The C89 standard formalized ASCII as the default, while C99
+                introduced support for extended character sets to accommodate internationalization, reflecting C’s
+                evolution to modern needs by 2025.</p>
+        </section>
+        <section id="variables">
+            <h2> Variables <span class="progress-check">✔</span></h2>
+            <p>In C, a <b>variable</b> is a named storage location in memory used to hold data that can be modified
+                during program execution. Variables must be declared with a specific data type before use, reflecting
+                C’s structured and type-safe design, established in 1972 by Dennis Ritchie for UNIX development.
+                Variables are fundamental to manipulating data, such as numbers, characters, or user input.</p>
+            <p><b>Key Rules for Variables:</b></p>
+            <ul>
+                <li><b>Declaration:</b> Specify the data type and name (e.g., <code>int age;</code>).</li>
+                <li><b>Initialization:</b> Assign a value at declaration (e.g., <code>int age = 20;</code>) or later.
+                </li>
+                <li><b>Naming:</b> Use letters, digits, or underscores; start with a letter or underscore;
+                    case-sensitive (e.g., <code>Age</code> ≠ <code>age</code>).</li>
+                <li><b>Scope:</b> Variables have local (within a function/block) or global (outside functions) scope.
+                </li>
+                <li><b>Storage Classes:</b> Modifiers like <code>auto</code>, <code>register</code>,
+                    <code>static</code>, or <code>extern</code> control lifetime and visibility.</li>
+            </ul>
+            <p><b>Note:</b> C’s variable declaration syntax, formalized in the C89 standard, ensures type safety and
+                efficient memory use. Variable sizes depend on data types (e.g., <code>int</code> is typically 4 bytes
+                on 64-bit systems).</p> <br>
+            <div class="code-title">Variables Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int global_var = 100; // Global variable
 
@@ -190,29 +221,42 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>Global variable: 100
+            <p><b>Output:</b></p>
+            <pre><code>Global variable: 100
 Local variable (age): 20
 Local variable (salary): 2500.50
 Local variable (grade): B
 Static variable (counter): 1
 </code></pre> <br>
-    <p><b>Historical Note:</b> C’s variable system, introduced in the 1970s, allowed fine-grained control over memory, key for UNIX’s portability. The C89 standard formalized declarations, while C99 added features like variable-length arrays, enhancing flexibility for modern applications in 2025.</p>
-</section>
+            <p><b>Historical Note:</b> C’s variable system, introduced in the 1970s, allowed fine-grained control over
+                memory, key for UNIX’s portability. The C89 standard formalized declarations, while C99 added features
+                like variable-length arrays, enhancing flexibility for modern applications in 2025.</p>
+        </section>
 
 
         <section id="datatypes">
-    <h2> Data Types in C <span class="progress-check">✔</span></h2>
-    <p>C provides a set of basic data types for storing different kinds of values. These types are fundamental to C’s efficiency and low-level control, designed to work closely with hardware. Below are the core data types, their typical sizes (on a 64-bit system), and their uses:</p>
-    <ul>
-        <li><b>int:</b> Stores whole numbers (e.g., 20). Typically 4 bytes, with a range of -2,147,483,648 to 2,147,483,647 (signed).</li>
-        <li><b>float:</b> Stores single-precision decimal numbers (e.g., 3.14). 4 bytes, with ~6-7 digits of precision.</li>
-        <li><b>double:</b> Stores double-precision decimal numbers (e.g., 3.14159265359). 8 bytes, with ~15-16 digits of precision.</li>
-        <li><b>char:</b> Stores single characters (e.g., 'A') or small integers. 1 byte, with a range of -128 to 127 (signed) or 0 to 255 (unsigned).</li>
-        <li><b>_Bool:</b> Stores Boolean values (0 for false, non-zero for true). Introduced in C99, typically 1 byte.</li>
-    </ul>
-    <p><b>Modifiers:</b> Use <code>signed</code>, <code>unsigned</code>, <code>short</code>, or <code>long</code> to adjust range or size (e.g., <code>unsigned int</code>, <code>long long int</code>). Note that sizes may vary by platform (e.g., 32-bit vs. 64-bit systems), a consideration since C’s early days in the 1970s.</p> <br>    <div class="code-title">Data Types Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+            <h2> Data Types in C <span class="progress-check">✔</span></h2>
+            <p>C provides a set of basic data types for storing different kinds of values. These types are fundamental
+                to C’s efficiency and low-level control, designed to work closely with hardware. Below are the core data
+                types, their typical sizes (on a 64-bit system), and their uses:</p>
+            <ul>
+                <li><b>int:</b> Stores whole numbers (e.g., 20). Typically 4 bytes, with a range of -2,147,483,648 to
+                    2,147,483,647 (signed).</li>
+                <li><b>float:</b> Stores single-precision decimal numbers (e.g., 3.14). 4 bytes, with ~6-7 digits of
+                    precision.</li>
+                <li><b>double:</b> Stores double-precision decimal numbers (e.g., 3.14159265359). 8 bytes, with ~15-16
+                    digits of precision.</li>
+                <li><b>char:</b> Stores single characters (e.g., 'A') or small integers. 1 byte, with a range of -128 to
+                    127 (signed) or 0 to 255 (unsigned).</li>
+                <li><b>_Bool:</b> Stores Boolean values (0 for false, non-zero for true). Introduced in C99, typically 1
+                    byte.</li>
+            </ul>
+            <p><b>Modifiers:</b> Use <code>signed</code>, <code>unsigned</code>, <code>short</code>, or
+                <code>long</code> to adjust range or size (e.g., <code>unsigned int</code>, <code>long long int</code>).
+                Note that sizes may vary by platform (e.g., 32-bit vs. 64-bit systems), a consideration since C’s early
+                days in the 1970s.</p> <br>
+            <div class="code-title">Data Types Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int age = 20;
@@ -230,31 +274,44 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output (on a 64-bit system):</b></p>
-    <pre><code>Integer (int): 20, Size: 4 bytes
+            <p><b>Output (on a 64-bit system):</b></p>
+            <pre><code>Integer (int): 20, Size: 4 bytes
 Float: 3.14, Size: 4 bytes
 Double: 3.1415926536, Size: 8 bytes
 Character (char): A, Size: 1 byte
 Boolean (_Bool): 1, Size: 1 byte
 </code></pre> <br>
-    <p><b>Note:</b> C’s data types, formalized in the C89 standard, are designed for portability and performance. The <code>sizeof</code> operator reveals type sizes, which may differ across systems, reflecting C’s hardware-dependent roots from its creation in 1972 for UNIX development.</p>
-</section>
+            <p><b>Note:</b> C’s data types, formalized in the C89 standard, are designed for portability and
+                performance. The <code>sizeof</code> operator reveals type sizes, which may differ across systems,
+                reflecting C’s hardware-dependent roots from its creation in 1972 for UNIX development.</p>
+        </section>
 
 
 
-<section id="constants">
-    <h2> Constants <span class="progress-check">✔</span></h2>
-    <p>In C, a <b>constant</b> is a value that cannot be modified during program execution. Constants are used to define fixed values, such as mathematical constants or configuration settings, ensuring code reliability and readability. Introduced in C’s design in 1972 by Dennis Ritchie for UNIX, constants leverage C’s type system to provide immutable data, formalized in the C89 standard.</p>
-    <p><b>Types of Constants:</b></p>
-    <ul>
-        <li><b>Literal Constants:</b> Fixed values like integers (e.g., <code>42</code>), floating-point numbers (e.g., <code>3.14</code>), characters (e.g., <code>'A'</code>), or strings (e.g., <code>"Hello"</code>).</li>
-        <li><b>Const Keyword:</b> Variables declared with <code>const</code> cannot be modified (e.g., <code>const int MAX = 100;</code>).</li>
-        <li><b>#define Preprocessor:</b> Defines symbolic constants via macros (e.g., <code>#define PI 3.14</code>).</li>
-        <li><b>Enumeration Constants:</b> Named integer constants using <code>enum</code> (e.g., <code>enum { RED = 1, GREEN, BLUE };</code>).</li>
-    </ul>
-    <p><b>Note:</b> Constants enhance code clarity and prevent accidental changes. The <code>const</code> keyword, introduced in C89, ensures type safety, while <code>#define</code> is a legacy approach from C’s early days. Use <code>const</code> for type-checked constants in modern C (2025).</p>
-    <br><div class="code-title">Constants Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="constants">
+            <h2> Constants <span class="progress-check">✔</span></h2>
+            <p>In C, a <b>constant</b> is a value that cannot be modified during program execution. Constants are used
+                to define fixed values, such as mathematical constants or configuration settings, ensuring code
+                reliability and readability. Introduced in C’s design in 1972 by Dennis Ritchie for UNIX, constants
+                leverage C’s type system to provide immutable data, formalized in the C89 standard.</p>
+            <p><b>Types of Constants:</b></p>
+            <ul>
+                <li><b>Literal Constants:</b> Fixed values like integers (e.g., <code>42</code>), floating-point numbers
+                    (e.g., <code>3.14</code>), characters (e.g., <code>'A'</code>), or strings (e.g.,
+                    <code>"Hello"</code>).</li>
+                <li><b>Const Keyword:</b> Variables declared with <code>const</code> cannot be modified (e.g.,
+                    <code>const int MAX = 100;</code>).</li>
+                <li><b>#define Preprocessor:</b> Defines symbolic constants via macros (e.g.,
+                    <code>#define PI 3.14</code>).</li>
+                <li><b>Enumeration Constants:</b> Named integer constants using <code>enum</code> (e.g.,
+                    <code>enum { RED = 1, GREEN, BLUE };</code>).</li>
+            </ul>
+            <p><b>Note:</b> Constants enhance code clarity and prevent accidental changes. The <code>const</code>
+                keyword, introduced in C89, ensures type safety, while <code>#define</code> is a legacy approach from
+                C’s early days. Use <code>const</code> for type-checked constants in modern C (2025).</p>
+            <br>
+            <div class="code-title">Constants Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 #define PI 3.14159 // Preprocessor constant
 
@@ -276,8 +333,8 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>Literal Integer: 42
+            <p><b>Output:</b></p>
+            <pre><code>Literal Integer: 42
 Literal Float: 2.72
 Literal Character: X
 Literal String: Hello, C!
@@ -285,24 +342,39 @@ Const Variable (MAX_AGE): 150
 Preprocessor Constant (PI): 3.14159
 Enum Constant (GREEN): 2
 </code></pre>
-    <br><p><b>Historical Note:</b> Constants in C, rooted in its 1972 design, provided fixed values for UNIX system programming. The C89 standard introduced <code>const</code> for type-safe immutability, while C99 and later standards enhanced enumeration support, ensuring constants remain vital for reliable code in 2025.</p>
-</section>
+            <br>
+            <p><b>Historical Note:</b> Constants in C, rooted in its 1972 design, provided fixed values for UNIX system
+                programming. The C89 standard introduced <code>const</code> for type-safe immutability, while C99 and
+                later standards enhanced enumeration support, ensuring constants remain vital for reliable code in 2025.
+            </p>
+        </section>
 
-<section id="operators">
-    <h2> Operators <span class="progress-check">✔</span></h2>
-    <p>In C, <b>operators</b> are symbols that perform operations on variables and values, such as arithmetic calculations, comparisons, or logical operations. Operators are a core part of C’s syntax, designed in 1972 by Dennis Ritchie to enable efficient manipulation of data in UNIX system programming. They work with C’s data types and variables, providing flexibility and control.</p>
-    <p><b>Types of Operators:</b></p>
-    <ul>
-        <li><b>Arithmetic Operators:</b> Perform mathematical operations (e.g., <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>).</li>
-        <li><b>Relational Operators:</b> Compare values (e.g., <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>).</li>
-        <li><b>Logical Operators:</b> Combine conditions (e.g., <code>&&</code>, <code>||</code>, <code>!</code>).</li>
-        <li><b>Bitwise Operators:</b> Manipulate bits (e.g., <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code>).</li>
-        <li><b>Assignment Operators:</b> Assign values (e.g., <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>).</li>
-        <li><b>Miscellaneous Operators:</b> Include <code>sizeof</code>, <code>&</code> (address), <code>*</code> (dereference), and <code>?:</code> (ternary).</li>
-    </ul>
-    <p><b>Note:</b> Operators follow a precedence order, with parentheses <code>()</code> used to override it. The C89 standard formalized operator behavior, ensuring portability across platforms, a key feature for C’s use in 2025.</p>
-    <div class="code-title">Operators Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="operators">
+            <h2> Operators <span class="progress-check">✔</span></h2>
+            <p>In C, <b>operators</b> are symbols that perform operations on variables and values, such as arithmetic
+                calculations, comparisons, or logical operations. Operators are a core part of C’s syntax, designed in
+                1972 by Dennis Ritchie to enable efficient manipulation of data in UNIX system programming. They work
+                with C’s data types and variables, providing flexibility and control.</p>
+            <p><b>Types of Operators:</b></p>
+            <ul>
+                <li><b>Arithmetic Operators:</b> Perform mathematical operations (e.g., <code>+</code>, <code>-</code>,
+                    <code>*</code>, <code>/</code>, <code>%</code>).</li>
+                <li><b>Relational Operators:</b> Compare values (e.g., <code>==</code>, <code>!=</code>,
+                    <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>).</li>
+                <li><b>Logical Operators:</b> Combine conditions (e.g., <code>&&</code>, <code>||</code>,
+                    <code>!</code>).</li>
+                <li><b>Bitwise Operators:</b> Manipulate bits (e.g., <code>&</code>, <code>|</code>, <code>^</code>,
+                    <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code>).</li>
+                <li><b>Assignment Operators:</b> Assign values (e.g., <code>=</code>, <code>+=</code>, <code>-=</code>,
+                    <code>*=</code>, <code>/=</code>).</li>
+                <li><b>Miscellaneous Operators:</b> Include <code>sizeof</code>, <code>&</code> (address),
+                    <code>*</code> (dereference), and <code>?:</code> (ternary).</li>
+            </ul>
+            <p><b>Note:</b> Operators follow a precedence order, with parentheses <code>()</code> used to override it.
+                The C89 standard formalized operator behavior, ensuring portability across platforms, a key feature for
+                C’s use in 2025.</p>
+            <div class="code-title">Operators Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int a = 10, b = 3;
@@ -324,8 +396,8 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>Arithmetic (+): 13
+            <p><b>Output:</b></p>
+            <pre><code>Arithmetic (+): 13
 Arithmetic (%): 1
 Relational (==): 0
 Logical (&&): 1
@@ -333,22 +405,34 @@ Bitwise (&): 2
 Assignment (+=): 15
 Ternary (?:): a is greater
 </code></pre>
-    <p><b>Historical Note:</b> C’s operators, rooted in its 1972 design, enabled efficient computation for UNIX. The C89 standard standardized operator precedence and behavior, while C99 introduced features like compound literals, enhancing operator use in modern applications by 2025.</p>
-</section>
+            <p><b>Historical Note:</b> C’s operators, rooted in its 1972 design, enabled efficient computation for UNIX.
+                The C89 standard standardized operator precedence and behavior, while C99 introduced features like
+                compound literals, enhancing operator use in modern applications by 2025.</p>
+        </section>
 
-<section id="boolean">
-    <h2> Boolean <span class="progress-check">✔</span></h2>
-    <p>In C, the <b>Boolean</b> type, represented by <code>_Bool</code>, is used to store true or false values, primarily for logical operations and conditions. Introduced in the C99 standard, <code>_Bool</code> is a fundamental data type that holds <code>0</code> (false) or any non-zero value (true). Before C99, C used integers (<code>0</code> for false, non-zero for true) for Boolean logic, reflecting its minimalist design from 1972 by Dennis Ritchie for UNIX.</p>
-    <p><b>Key Points about Boolean:</b></p>
-    <ul>
-        <li><b>Type:</b> <code>_Bool</code>, typically 1 byte, stores <code>0</code> (false) or <code>1</code> (true).</li>
-        <li><b>Header:</b> Include <code>&lt;stdbool.h&gt;</code> for <code>bool</code>, <code>true</code>, and <code>false</code> macros for readability.</li>
-        <li><b>Usage:</b> Used with relational (<code>==</code>, <code>&gt;</code>) and logical operators (<code>&&</code>, <code>||</code>, <code>!</code>).</li>
-        <li><b>Conversion:</b> Assigning any non-zero value to <code>_Bool</code> sets it to <code>1</code>; zero sets it to <code>0</code>.</li>
-    </ul>
-    <p><b>Note:</b> Before C99, programmers used <code>int</code> for Boolean logic, a common practice in early UNIX programming. In modern C (2025), use <code>bool</code> with <code>&lt;stdbool.h&gt;</code> for clarity and portability.</p>
-    <div class="code-title">Boolean Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="boolean">
+            <h2> Boolean <span class="progress-check">✔</span></h2>
+            <p>In C, the <b>Boolean</b> type, represented by <code>_Bool</code>, is used to store true or false values,
+                primarily for logical operations and conditions. Introduced in the C99 standard, <code>_Bool</code> is a
+                fundamental data type that holds <code>0</code> (false) or any non-zero value (true). Before C99, C used
+                integers (<code>0</code> for false, non-zero for true) for Boolean logic, reflecting its minimalist
+                design from 1972 by Dennis Ritchie for UNIX.</p>
+            <p><b>Key Points about Boolean:</b></p>
+            <ul>
+                <li><b>Type:</b> <code>_Bool</code>, typically 1 byte, stores <code>0</code> (false) or <code>1</code>
+                    (true).</li>
+                <li><b>Header:</b> Include <code>&lt;stdbool.h&gt;</code> for <code>bool</code>, <code>true</code>, and
+                    <code>false</code> macros for readability.</li>
+                <li><b>Usage:</b> Used with relational (<code>==</code>, <code>&gt;</code>) and logical operators
+                    (<code>&&</code>, <code>||</code>, <code>!</code>).</li>
+                <li><b>Conversion:</b> Assigning any non-zero value to <code>_Bool</code> sets it to <code>1</code>;
+                    zero sets it to <code>0</code>.</li>
+            </ul>
+            <p><b>Note:</b> Before C99, programmers used <code>int</code> for Boolean logic, a common practice in early
+                UNIX programming. In modern C (2025), use <code>bool</code> with <code>&lt;stdbool.h&gt;</code> for
+                clarity and portability.</p>
+            <div class="code-title">Boolean Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 #include &lt;stdbool.h&gt;
 
 int main() {
@@ -367,28 +451,34 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>Native _Bool (is_active): 1
+            <p><b>Output:</b></p>
+            <pre><code>Native _Bool (is_active): 1
 bool (is_valid): 1
 Relational (is_positive): 1
 Logical AND (logical_and): 1
 Size of _Bool: 1
 </code></pre>
-    <p><b>Historical Note:</b> C’s lack of a Boolean type until C99 reflected its 1972 design for simplicity and efficiency in UNIX. The C99 standard introduced <code>_Bool</code> and <code>&lt;stdbool.h&gt;</code> to align with modern programming needs, ensuring compatibility and clarity in 2025 applications.</p>
-</section>
+            <p><b>Historical Note:</b> C’s lack of a Boolean type until C99 reflected its 1972 design for simplicity and
+                efficiency in UNIX. The C99 standard introduced <code>_Bool</code> and <code>&lt;stdbool.h&gt;</code> to
+                align with modern programming needs, ensuring compatibility and clarity in 2025 applications.</p>
+        </section>
 
-<section id="switch">
-    <h2> Switch Statement <span class="progress-check">✔</span></h2>
-    <p>The <b>switch</b> statement in C provides a way to execute one of many code blocks based on the value of an expression, offering an alternative to multiple <code>if-else</code> statements. Introduced in C’s 1972 design for structured control flow in UNIX, it’s efficient for multi-way branching.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Syntax:</b> Uses <code>switch(expression)</code> with <code>case</code> labels and an optional <code>default</code>.</li>
-        <li><b>Break:</b> <code>break</code> exits the switch to prevent fall-through to subsequent cases.</li>
-        <li><b>Expression:</b> Typically an integer or <code>char</code>, evaluated once.</li>
-    </ul>
-    <p><b>Note:</b> The C89 standard formalized switch behavior, ensuring portability. Use <code>break</code> to avoid unintended fall-through, a common pitfall in early C programs.</p>
-    <div class="code-title">Switch Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="switch">
+            <h2> Switch Statement <span class="progress-check">✔</span></h2>
+            <p>The <b>switch</b> statement in C provides a way to execute one of many code blocks based on the value of
+                an expression, offering an alternative to multiple <code>if-else</code> statements. Introduced in C’s
+                1972 design for structured control flow in UNIX, it’s efficient for multi-way branching.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Syntax:</b> Uses <code>switch(expression)</code> with <code>case</code> labels and an optional
+                    <code>default</code>.</li>
+                <li><b>Break:</b> <code>break</code> exits the switch to prevent fall-through to subsequent cases.</li>
+                <li><b>Expression:</b> Typically an integer or <code>char</code>, evaluated once.</li>
+            </ul>
+            <p><b>Note:</b> The C89 standard formalized switch behavior, ensuring portability. Use <code>break</code> to
+                avoid unintended fall-through, a common pitfall in early C programs.</p>
+            <div class="code-title">Switch Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int day = 3;
@@ -410,24 +500,28 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>Wednesday
+            <p><b>Output:</b></p>
+            <pre><code>Wednesday
 </code></pre>
-    <p><b>Historical Note:</b> The switch statement, part of C’s 1972 design, optimized control flow for UNIX utilities. C89 standardized its semantics, making it a staple for multi-way decisions in 2025.</p>
-</section>
+            <p><b>Historical Note:</b> The switch statement, part of C’s 1972 design, optimized control flow for UNIX
+                utilities. C89 standardized its semantics, making it a staple for multi-way decisions in 2025.</p>
+        </section>
 
-<section id="whileloop">
-    <h2> While Loop <span class="progress-check">✔</span></h2>
-    <p>The <b>while</b> loop in C repeatedly executes a block of code as long as a condition is true, ideal for indefinite iteration. Designed in 1972 for UNIX, it provides flexible looping with minimal syntax.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Syntax:</b> <code>while (condition) { statements; }</code>.</li>
-        <li><b>Condition:</b> Evaluated before each iteration; must be false to exit.</li>
-        <li><b>Infinite Loop:</b> Occurs if the condition never becomes false (e.g., <code>while (1)</code>).</li>
-    </ul>
-    <p><b>Note:</b> The C89 standard ensured consistent loop behavior. Always ensure the condition can become false to avoid infinite loops.</p>
-    <div class="code-title">While Loop Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="whileloop">
+            <h2> While Loop <span class="progress-check">✔</span></h2>
+            <p>The <b>while</b> loop in C repeatedly executes a block of code as long as a condition is true, ideal for
+                indefinite iteration. Designed in 1972 for UNIX, it provides flexible looping with minimal syntax.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Syntax:</b> <code>while (condition) { statements; }</code>.</li>
+                <li><b>Condition:</b> Evaluated before each iteration; must be false to exit.</li>
+                <li><b>Infinite Loop:</b> Occurs if the condition never becomes false (e.g., <code>while (1)</code>).
+                </li>
+            </ul>
+            <p><b>Note:</b> The C89 standard ensured consistent loop behavior. Always ensure the condition can become
+                false to avoid infinite loops.</p>
+            <div class="code-title">While Loop Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int i = 1;
@@ -440,24 +534,27 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>1 2 3 4 5
+            <p><b>Output:</b></p>
+            <pre><code>1 2 3 4 5
 </code></pre>
-    <p><b>Historical Note:</b> C’s while loop, from 1972, enabled efficient iteration in UNIX. C99’s Boolean enhancements improved condition clarity, maintaining relevance in 2025.</p>
-</section>
+            <p><b>Historical Note:</b> C’s while loop, from 1972, enabled efficient iteration in UNIX. C99’s Boolean
+                enhancements improved condition clarity, maintaining relevance in 2025.</p>
+        </section>
 
-<section id="forloop">
-    <h2> For Loop <span class="progress-check">✔</span></h2>
-    <p>The <b>for</b> loop in C is used for definite iteration, executing a block of code a specific number of times. Introduced in 1972, it’s compact and widely used for counted loops in C programs.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Syntax:</b> <code>for (init; condition; update) { statements; }</code>.</li>
-        <li><b>Components:</b> Initialization, condition check, and update expression.</li>
-        <li><b>Flexibility:</b> Any component can be omitted, but semicolons are required.</li>
-    </ul>
-    <p><b>Note:</b> Standardized in C89, the for loop is ideal for array iteration and precise control, common in modern C applications.</p>
-    <div class="code-title">For Loop Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="forloop">
+            <h2> For Loop <span class="progress-check">✔</span></h2>
+            <p>The <b>for</b> loop in C is used for definite iteration, executing a block of code a specific number of
+                times. Introduced in 1972, it’s compact and widely used for counted loops in C programs.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Syntax:</b> <code>for (init; condition; update) { statements; }</code>.</li>
+                <li><b>Components:</b> Initialization, condition check, and update expression.</li>
+                <li><b>Flexibility:</b> Any component can be omitted, but semicolons are required.</li>
+            </ul>
+            <p><b>Note:</b> Standardized in C89, the for loop is ideal for array iteration and precise control, common
+                in modern C applications.</p>
+            <div class="code-title">For Loop Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     for (int i = 1; i <= 5; i++) {
@@ -467,24 +564,28 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>1 2 3 4 5
+            <p><b>Output:</b></p>
+            <pre><code>1 2 3 4 5
 </code></pre>
-    <p><b>Historical Note:</b> The for loop, part of C’s 1972 design, streamlined iteration for UNIX. C99 allowed declarations in the init clause (e.g., <code>for (int i = 0; ...)</code>), enhancing its usability.</p>
-</section>
+            <p><b>Historical Note:</b> The for loop, part of C’s 1972 design, streamlined iteration for UNIX. C99
+                allowed declarations in the init clause (e.g., <code>for (int i = 0; ...)</code>), enhancing its
+                usability.</p>
+        </section>
 
-<section id="breakcontinue">
-    <h2> Break and Continue <span class="progress-check">✔</span></h2>
-    <p>The <b>break</b> and <b>continue</b> statements in C control loop and switch execution. <code>break</code> exits a loop or switch, while <code>continue</code> skips to the next loop iteration. Introduced in 1972, they provide precise flow control.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Break:</b> Terminates the nearest enclosing loop or switch.</li>
-        <li><b>Continue:</b> Skips the current iteration and proceeds to the next.</li>
-        <li><b>Usage:</b> Common in loops and switch statements for conditional control.</li>
-    </ul>
-    <p><b>Note:</b> C89 standardized their behavior, ensuring consistent use in loops and switches.</p>
-    <div class="code-title">Break and Continue Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="breakcontinue">
+            <h2> Break and Continue <span class="progress-check">✔</span></h2>
+            <p>The <b>break</b> and <b>continue</b> statements in C control loop and switch execution.
+                <code>break</code> exits a loop or switch, while <code>continue</code> skips to the next loop iteration.
+                Introduced in 1972, they provide precise flow control.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Break:</b> Terminates the nearest enclosing loop or switch.</li>
+                <li><b>Continue:</b> Skips the current iteration and proceeds to the next.</li>
+                <li><b>Usage:</b> Common in loops and switch statements for conditional control.</li>
+            </ul>
+            <p><b>Note:</b> C89 standardized their behavior, ensuring consistent use in loops and switches.</p>
+            <div class="code-title">Break and Continue Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     for (int i = 1; i <= 5; i++) {
@@ -496,24 +597,28 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>1 2 4
+            <p><b>Output:</b></p>
+            <pre><code>1 2 4
 </code></pre>
-    <p><b>Historical Note:</b> Break and continue, from C’s 1972 design, enabled fine-grained control in UNIX. Their standardized behavior in C89 ensures reliability in 2025.</p>
-</section>
+            <p><b>Historical Note:</b> Break and continue, from C’s 1972 design, enabled fine-grained control in UNIX.
+                Their standardized behavior in C89 ensures reliability in 2025.</p>
+        </section>
 
-<section id="strings">
-    <h2> Strings <span class="progress-check">✔</span></h2>
-    <p>In C, a <b>string</b> is an array of characters terminated by a null character (<code>\0</code>). Strings are used to store text and are manipulated using standard library functions from <code>&lt;string.h&gt;</code>. Introduced in 1972, strings are central to C’s text processing.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Declaration:</b> As <code>char</code> arrays (e.g., <code>char str[] = "Hello";</code>).</li>
-        <li><b>Null Termination:</b> Ends with <code>\0</code> to mark the string’s end.</li>
-        <li><b>Library Functions:</b> <code>strlen</code>, <code>strcpy</code>, <code>strcmp</code>, etc.</li>
-    </ul>
-    <p><b>Note:</b> C89 standardized string handling, with C99 adding support for wide characters. Strings require careful memory management to avoid overflows.</p>
-    <div class="code-title">Strings Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="strings">
+            <h2> Strings <span class="progress-check">✔</span></h2>
+            <p>In C, a <b>string</b> is an array of characters terminated by a null character (<code>\0</code>). Strings
+                are used to store text and are manipulated using standard library functions from
+                <code>&lt;string.h&gt;</code>. Introduced in 1972, strings are central to C’s text processing.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Declaration:</b> As <code>char</code> arrays (e.g., <code>char str[] = "Hello";</code>).</li>
+                <li><b>Null Termination:</b> Ends with <code>\0</code> to mark the string’s end.</li>
+                <li><b>Library Functions:</b> <code>strlen</code>, <code>strcpy</code>, <code>strcmp</code>, etc.</li>
+            </ul>
+            <p><b>Note:</b> C89 standardized string handling, with C99 adding support for wide characters. Strings
+                require careful memory management to avoid overflows.</p>
+            <div class="code-title">Strings Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 
 int main() {
@@ -525,25 +630,29 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>String: Hello, C!
+            <p><b>Output:</b></p>
+            <pre><code>String: Hello, C!
 Length: 9
 </code></pre>
-    <p><b>Historical Note:</b> Strings, part of C’s 1972 design, enabled text processing in UNIX. C99’s wide character support expanded their use for internationalization in 2025.</p>
-</section>
+            <p><b>Historical Note:</b> Strings, part of C’s 1972 design, enabled text processing in UNIX. C99’s wide
+                character support expanded their use for internationalization in 2025.</p>
+        </section>
 
-<section id="userinput">
-    <h2> User Input <span class="progress-check">✔</span></h2>
-    <p>C supports <b>user input</b> through standard library functions like <code>scanf</code> and <code>getchar</code> from <code>&lt;stdio.h&gt;</code>, allowing programs to read data from the user. Introduced in 1972, input functions were key for interactive UNIX programs.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>scanf:</b> Reads formatted input (e.g., <code>scanf("%d", &x);</code>).</li>
-        <li><b>getchar:</b> Reads a single character.</li>
-        <li><b>Buffer Safety:</b> Use caution to avoid buffer overflows with strings.</li>
-    </ul>
-    <p><b>Note:</b> C89 standardized input functions, but modern C requires careful handling to prevent security issues.</p>
-    <div class="code-title">User Input Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="userinput">
+            <h2> User Input <span class="progress-check">✔</span></h2>
+            <p>C supports <b>user input</b> through standard library functions like <code>scanf</code> and
+                <code>getchar</code> from <code>&lt;stdio.h&gt;</code>, allowing programs to read data from the user.
+                Introduced in 1972, input functions were key for interactive UNIX programs.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>scanf:</b> Reads formatted input (e.g., <code>scanf("%d", &x);</code>).</li>
+                <li><b>getchar:</b> Reads a single character.</li>
+                <li><b>Buffer Safety:</b> Use caution to avoid buffer overflows with strings.</li>
+            </ul>
+            <p><b>Note:</b> C89 standardized input functions, but modern C requires careful handling to prevent security
+                issues.</p>
+            <div class="code-title">User Input Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int age;
@@ -559,26 +668,31 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output (example input):</b></p>
-    <pre><code>Enter your age: 25
+            <p><b>Output (example input):</b></p>
+            <pre><code>Enter your age: 25
 Enter your name: Alice
 Age: 25, Name: Alice
 </code></pre>
-    <p><b>Historical Note:</b> User input, from C’s 1972 design, enabled interactive UNIX tools. C89’s standardization of <code>scanf</code> ensures portability, though modern C emphasizes safe input handling.</p>
-</section>
+            <p><b>Historical Note:</b> User input, from C’s 1972 design, enabled interactive UNIX tools. C89’s
+                standardization of <code>scanf</code> ensures portability, though modern C emphasizes safe input
+                handling.</p>
+        </section>
 
-<section id="memoryaddress">
-    <h2> Memory Address <span class="progress-check">✔</span></h2>
-    <p>In C, a <b>memory address</b> is the location in memory where a variable is stored, accessible via the address-of operator (<code>&</code>). C’s low-level memory access, designed in 1972 for UNIX, makes addresses critical for pointers and dynamic memory.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Address Operator:</b> <code>&variable</code> returns the memory address.</li>
-        <li><b>Format:</b> Printed as hexadecimal using <code>%p</code> in <code>printf</code>.</li>
-        <li><b>Use:</b> Essential for pointers and memory management.</li>
-    </ul>
-    <p><b>Note:</b> C89 standardized address operations, ensuring consistent memory handling across platforms.</p>
-    <div class="code-title">Memory Address Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="memoryaddress">
+            <h2> Memory Address <span class="progress-check">✔</span></h2>
+            <p>In C, a <b>memory address</b> is the location in memory where a variable is stored, accessible via the
+                address-of operator (<code>&</code>). C’s low-level memory access, designed in 1972 for UNIX, makes
+                addresses critical for pointers and dynamic memory.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Address Operator:</b> <code>&variable</code> returns the memory address.</li>
+                <li><b>Format:</b> Printed as hexadecimal using <code>%p</code> in <code>printf</code>.</li>
+                <li><b>Use:</b> Essential for pointers and memory management.</li>
+            </ul>
+            <p><b>Note:</b> C89 standardized address operations, ensuring consistent memory handling across platforms.
+            </p>
+            <div class="code-title">Memory Address Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int x = 42;
@@ -589,25 +703,29 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output (example address):</b></p>
-    <pre><code>Value of x: 42
+            <p><b>Output (example address):</b></p>
+            <pre><code>Value of x: 42
 Address of x: 0x7ffee4c4a4ac
 </code></pre>
-    <p><b>Historical Note:</b> Memory addresses, central to C’s 1972 design, enabled low-level control for UNIX. C89’s standardization ensured portability, vital for 2025 system programming.</p>
-</section>
+            <p><b>Historical Note:</b> Memory addresses, central to C’s 1972 design, enabled low-level control for UNIX.
+                C89’s standardization ensured portability, vital for 2025 system programming.</p>
+        </section>
 
-<section id="arrays">
-    <h2> Arrays <span class="progress-check">✔</span></h2>
-    <p>An <b>array</b> in C is( Linear Data Structure) a collection of elements of the same data type, stored contiguously in memory. Introduced in 1972, arrays are fundamental for handling multiple values efficiently in C programs.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Declaration:</b> <code>type name[size];</code> (e.g., <code>int arr[5];</code>).</li>
-        <li><b>Indexing:</b> Zero-based (e.g., <code>arr[0]</code> to <code>arr[4]</code>).</li>
-        <li><b>Memory:</b> Contiguous allocation, accessible via pointers.</li>
-    </ul>
-    <p><b>Note:</b> C99 introduced variable-length arrays (VLAs), but fixed-size arrays remain common. Always check bounds to avoid errors.</p>
-    <div class="code-title">Arrays Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="arrays">
+            <h2> Arrays <span class="progress-check">✔</span></h2>
+            <p>An <b>array</b> in C is( Linear Data Structure) a collection of elements of the same data type, stored
+                contiguously in memory. Introduced in 1972, arrays are fundamental for handling multiple values
+                efficiently in C programs.</p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Declaration:</b> <code>type name[size];</code> (e.g., <code>int arr[5];</code>).</li>
+                <li><b>Indexing:</b> Zero-based (e.g., <code>arr[0]</code> to <code>arr[4]</code>).</li>
+                <li><b>Memory:</b> Contiguous allocation, accessible via pointers.</li>
+            </ul>
+            <p><b>Note:</b> C99 introduced variable-length arrays (VLAs), but fixed-size arrays remain common. Always
+                check bounds to avoid errors.</p>
+            <div class="code-title">Arrays Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int arr[5] = {10, 20, 30, 40, 50};
@@ -619,28 +737,32 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>arr[0] = 10
+            <p><b>Output:</b></p>
+            <pre><code>arr[0] = 10
 arr[1] = 20
 arr[2] = 30
 arr[3] = 40
 arr[4] = 50
 </code></pre>
-    <p><b>Historical Note:</b> Arrays, from C’s 1972 design, enabled efficient data storage in UNIX. C99’s VLAs added flexibility, maintaining arrays’ importance in 2025.</p>
-</section>
+            <p><b>Historical Note:</b> Arrays, from C’s 1972 design, enabled efficient data storage in UNIX. C99’s VLAs
+                added flexibility, maintaining arrays’ importance in 2025.</p>
+        </section>
 
-<section id="pointers">
-    <h2> Pointers <span class="progress-check">✔</span></h2>
-    <p>A <b>pointer</b> in C is a variable that stores a memory address, enabling direct memory manipulation. Central to C’s 1972 design for UNIX, pointers are key for dynamic memory and efficient data handling.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Declaration:</b> <code>type *name;</code> (e.g., <code>int *ptr;</code>).</li>
-        <li><b>Operators:</b> <code>&</code> (address), <code>*</code> (dereference).</li>
-        <li><b>Use:</b> For arrays, dynamic memory, and function arguments.</li>
-    </ul>
-    <p><b>Note:</b> C89 standardized pointer behavior. Pointers require careful use to avoid errors like null pointer dereferencing.</p>
-    <div class="code-title">Pointers Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        <section id="pointers">
+            <h2> Pointers <span class="progress-check">✔</span></h2>
+            <p>A <b>pointer</b> in C is a variable that stores a memory address, enabling direct memory manipulation.
+                Central to C’s 1972 design for UNIX, pointers are key for dynamic memory and efficient data handling.
+            </p>
+            <p><b>Key Points:</b></p>
+            <ul>
+                <li><b>Declaration:</b> <code>type *name;</code> (e.g., <code>int *ptr;</code>).</li>
+                <li><b>Operators:</b> <code>&</code> (address), <code>*</code> (dereference).</li>
+                <li><b>Use:</b> For arrays, dynamic memory, and function arguments.</li>
+            </ul>
+            <p><b>Note:</b> C89 standardized pointer behavior. Pointers require careful use to avoid errors like null
+                pointer dereferencing.</p>
+            <div class="code-title">Pointers Example</div>
+            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
     int x = 42;
@@ -653,14 +775,211 @@ int main() {
     return 0;
 }
 </code></pre>
-    <p><b>Output (example address):</b></p>
-    <pre><code>Value of x: 42
+            <p><b>Output (example address):</b></p>
+            <pre><code>Value of x: 42
 Address of x: 0x7ffee4c4a4ac
 Value via pointer: 42
 </code></pre>
-    <p><b>Historical Note:</b> Pointers, a hallmark of C’s 1972 design, enabled low-level memory control for UNIX. C89’s standardization ensures their reliability in 2025 applications.</p>
+            <p><b>Historical Note:</b> Pointers, a hallmark of C’s 1972 design, enabled low-level memory control for
+                UNIX. C89’s standardization ensures their reliability in 2025 applications.</p>
+        </section>
+
+<section id="functions">
+    <h2> Functions <span class="progress-check">✔</span></h2>
+    <p>In C, a <b>function</b> is a block of code that performs a specific task and can be called from other parts of the program. Functions, introduced in C’s 1972 design by Dennis Ritchie for UNIX, promote code modularity and reusability, making programs more organized and efficient.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Definition:</b> Defined with a return type, name, and optional parameters (e.g., <code>int add(int a, int b)</code>).</li>
+        <li><b>Main Function:</b> <code>main()</code> is the entry point of every C program.</li>
+        <li><b>Return:</b> Uses <code>return</code> to send back a value or <code>void</code> for no return.</li>
+    </ul>
+    <p><b>Note:</b> C89 standardized function syntax, with C99 adding inline functions for optimization. Functions are essential for structured programming in 2025.</p>
+    <div class="code-title">Functions Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 3);
+    printf("Sum: %d\n", result);
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Sum: 8
+</code></pre>
+    <p><b>Historical Note:</b> Functions, a core feature of C’s 1972 design, enabled modular UNIX programming. C89’s function prototypes improved type safety, ensuring reliability in modern C applications.</p>
 </section>
-      
+
+<section id="functionparameters">
+    <h2> Function Parameters <span class="progress-check">✔</span></h2>
+    <p><b>Function parameters</b> in C are variables passed to a function to provide input data. Parameters allow functions to operate on dynamic values, a feature integral to C’s 1972 design for flexible UNIX utilities.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Call-by-Value:</b> Parameters are copies of arguments, so changes don’t affect the original.</li>
+        <li><b>Call-by-Reference:</b> Use pointers to modify original values.</li>
+        <li><b>Declaration:</b> Specified in the function signature (e.g., <code>void swap(int *a, int *b)</code>).</li>
+    </ul>
+    <p><b>Note:</b> C89’s function prototypes ensure type checking for parameters, improving safety.</p>
+    <div class="code-title">Function Parameters Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 10, y = 20;
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+    printf("After swap: x = %d, y = %d\n", x, y);
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Before swap: x = 10, y = 20
+After swap: x = 20, y = 10
+</code></pre>
+    <p><b>Historical Note:</b> Parameters, part of C’s 1972 design, enabled flexible function calls in UNIX. C89’s prototypes ensured type-safe parameter passing, critical for 2025 applications.</p>
+</section>
+
+<section id="scope">
+    <h2> Scope <span class="progress-check">✔</span></h2>
+    <p><b>Scope</b> in C determines the visibility and lifetime of variables and functions. Defined in C’s 1972 design, scope ensures controlled access to data, preventing unintended modifications in UNIX programs.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Local Scope:</b> Variables declared inside a function or block, accessible only within.</li>
+        <li><b>Global Scope:</b> Variables declared outside functions, accessible everywhere.</li>
+        <li><b>Block Scope:</b> C99 introduced variables declared in blocks (e.g., inside loops).</li>
+    </ul>
+    <p><b>Note:</b> C89 standardized scope rules, with C99 enhancing block scope for variables like loop counters.</p>
+    <div class="code-title">Scope Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int global = 100; // Global scope
+
+int main() {
+    int local = 50; // Local scope
+    {
+        int block = 10; // Block scope
+        printf("Block scope: %d\n", block);
+    }
+    printf("Local scope: %d\n", local);
+    printf("Global scope: %d\n", global);
+    // printf("Block scope: %d\n", block); // Error: block not in scope
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Block scope: 10
+Local scope: 50
+Global scope: 100
+</code></pre>
+    <p><b>Historical Note:</b> Scope rules, from C’s 1972 design, ensured data isolation in UNIX. C99’s block scope improved flexibility, a feature widely used in 2025.</p>
+</section>
+
+<section id="functiondeclaration">
+    <h2> Function Declaration <span class="progress-check">✔</span></h2>
+    <p>A <b>function declaration</b> in C specifies a function’s name, return type, and parameters without its body, allowing use before definition. Introduced in 1972, declarations were formalized in C89 with prototypes for type safety.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Prototype:</b> Declares function signature (e.g., <code>int add(int, int);</code>).</li>
+        <li><b>Definition:</b> Includes the function body, typically after declaration.</li>
+        <li><b>Use:</b> Enables calling functions before their implementation.</li>
+    </ul>
+    <p><b>Note:</b> C89’s prototypes prevent type mismatches, a significant improvement over K&R C.</p>
+    <div class="code-title">Function Declaration Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int multiply(int a, int b); // Declaration
+
+int main() {
+    int result = multiply(4, 5);
+    printf("Product: %d\n", result);
+    
+    return 0;
+}
+
+int multiply(int a, int b) { // Definition
+    return a * b;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Product: 20
+</code></pre>
+    <p><b>Historical Note:</b> Function declarations, part of C’s 1972 design, supported modular UNIX code. C89’s prototypes ensured type safety, critical for modern C in 2025.</p>
+</section>
+
+<section id="recursion">
+    <h2> Recursion <span class="progress-check">✔</span></h2>
+    <p><b>Recursion</b> in C occurs when a function calls itself to solve a problem by breaking it into smaller instances. A key feature of C’s 1972 design, recursion is powerful for algorithms like factorials or tree traversals.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Base Case:</b> Condition to stop recursion, preventing infinite calls.</li>
+        <li><b>Recursive Case:</b> The function calls itself with modified arguments.</li>
+        <li><b>Stack:</b> Each call uses stack memory, requiring careful design.</li>
+    </ul>
+    <p><b>Note:</b> C89 standardized function call behavior, ensuring reliable recursion.</p>
+    <div class="code-title">Recursion Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int factorial(int n) {
+    if (n <= 1) return 1; // Base case
+    return n * factorial(n - 1); // Recursive case
+}
+
+int main() {
+    int n = 5;
+    printf("Factorial of %d: %d\n", n, factorial(n));
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Factorial of 5: 120
+</code></pre>
+    <p><b>Historical Note:</b> Recursion, supported since C’s 1972 design, enabled elegant solutions in UNIX. C89’s standardization ensured stack safety, vital for recursive algorithms in 2025.</p>
+</section>
+
+<section id="mathfunctions">
+    <h2> Math Functions <span class="progress-check">✔</span></h2>
+    <p>C provides <b>math functions</b> in the <code>&lt;math.h&gt;</code> library for operations like trigonometry, logarithms, and rounding. Introduced in C’s early days, these functions support numerical computations in UNIX and beyond.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Library:</b> Include <code>&lt;math.h&gt;</code> and link with <code>-lm</code> (e.g., <code>gcc -o program program.c -lm</code>).</li>
+        <li><b>Common Functions:</b> <code>sqrt</code>, <code>pow</code>, <code>sin</code>, <code>ceil</code>, <code>floor</code>.</li>
+        <li><b>Types:</b> Operate on <code>double</code> or <code>float</code>, returning <code>double</code>.</li>
+    </ul>
+    <p><b>Note:</b> C99 expanded <code>&lt;math.h&gt;</code> with functions like <code>fmin</code> and <code>fmax</code>, enhancing precision.</p>
+    <div class="code-title">Math Functions Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double x = 16.0, y = 2.0;
+    
+    printf("Square root of %.1f: %.1f\n", x, sqrt(x));
+    printf("Power %.1f^%.1f: %.1f\n", x, y, pow(x, y));
+    printf("Ceiling of 3.7: %.1f\n", ceil(3.7));
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Square root of 16.0: 4.0
+Power 16.0^2.0: 256.0
+Ceiling of 3.7: 4.0
+</code></pre>
+    <p><b>Historical Note:</b> Math functions, available since C’s 1972 design, supported numerical tasks in UNIX. C99’s expanded <code>&lt;math.h&gt;</code> ensures precision for modern scientific computing in 2025.</p>
+</section>
+
     </main>
 
     <footer>
