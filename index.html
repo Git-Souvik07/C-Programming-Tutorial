@@ -108,19 +108,43 @@ int main() {
         </section>
 
         <section id="datatypes">
-            <h2>3. Data Types in C <span class="progress-check">✔</span></h2>
-            <p>C supports these basic data types:</p>
-            <ul>
-                <li><b>int:</b> For whole numbers (e.g., 20)</li>
-                <li><b>float:</b> For decimal numbers (e.g., 3.14)</li>
-                <li><b>double:</b> For larger decimals</li>
-                <li><b>char:</b> For single characters (e.g., 'A')</li>
-            </ul>
-            <div class="code-title">Data Types Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>int age = 20;
-float pi = 3.14;
-char grade = 'A';</code></pre>
-        </section>
+    <h2>3. Data Types in C <span class="progress-check">✔</span></h2>
+    <p>C provides a set of basic data types for storing different kinds of values. These types are fundamental to C’s efficiency and low-level control, designed to work closely with hardware. Below are the core data types, their typical sizes (on a 64-bit system), and their uses:</p>
+    <ul>
+        <li><b>int:</b> Stores whole numbers (e.g., 20). Typically 4 bytes, with a range of -2,147,483,648 to 2,147,483,647 (signed).</li>
+        <li><b>float:</b> Stores single-precision decimal numbers (e.g., 3.14). 4 bytes, with ~6-7 digits of precision.</li>
+        <li><b>double:</b> Stores double-precision decimal numbers (e.g., 3.14159265359). 8 bytes, with ~15-16 digits of precision.</li>
+        <li><b>char:</b> Stores single characters (e.g., 'A') or small integers. 1 byte, with a range of -128 to 127 (signed) or 0 to 255 (unsigned).</li>
+        <li><b>_Bool:</b> Stores Boolean values (0 for false, non-zero for true). Introduced in C99, typically 1 byte.</li>
+    </ul>
+    <p><b>Modifiers:</b> Use <code>signed</code>, <code>unsigned</code>, <code>short</code>, or <code>long</code> to adjust range or size (e.g., <code>unsigned int</code>, <code>long long int</code>). Note that sizes may vary by platform (e.g., 32-bit vs. 64-bit systems), a consideration since C’s early days in the 1970s.</p> <br>    <div class="code-title">Data Types Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 20;
+    float pi = 3.14;
+    double large_pi = 3.14159265359;
+    char grade = 'A';
+    _Bool is_valid = 1;
+
+    printf("Integer (int): %d, Size: %zu bytes\n", age, sizeof(age));
+    printf("Float: %.2f, Size: %zu bytes\n", pi, sizeof(pi));
+    printf("Double: %.10f, Size: %zu bytes\n", large_pi, sizeof(large_pi));
+    printf("Character (char): %c, Size: %zu bytes\n", grade, sizeof(grade));
+    printf("Boolean (_Bool): %d, Size: %zu bytes\n", is_valid, sizeof(is_valid));
+
+    return 0;
+}
+</code></pre>
+    <p><b>Output (on a 64-bit system):</b></p>
+    <pre><code>Integer (int): 20, Size: 4 bytes
+Float: 3.14, Size: 4 bytes
+Double: 3.1415926536, Size: 8 bytes
+Character (char): A, Size: 1 byte
+Boolean (_Bool): 1, Size: 1 byte
+</code></pre> <br>
+    <p><b>Note:</b> C’s data types, formalized in the C89 standard, are designed for portability and performance. The <code>sizeof</code> operator reveals type sizes, which may differ across systems, reflecting C’s hardware-dependent roots from its creation in 1972 for UNIX development.</p>
+</section>
 
         <section id="control">
             <h2>4. Control Statements <span class="progress-check">✔</span></h2>
