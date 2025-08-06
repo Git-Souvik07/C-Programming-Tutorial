@@ -21,20 +21,21 @@
 
     <button class="sidebar-toggle" aria-label="Toggle sidebar navigation">☰ Menu</button>
     <nav class="sidebar" role="navigation" aria-label="Main navigation">
-        <a href="#intro" data-section="intro">1. Introduction</a>
-        <a href="#syntax" data-section="syntax">2. Program Structure</a>
-        <a href="#datatypes" data-section="datatypes">3. Data Types</a>
-        <a href="#control" data-section="control">4. Control Statements</a>
-        <a href="#functions" data-section="functions">5. Functions</a>
-        <a href="#arrays" data-section="arrays">6. Arrays</a>
-        <a href="#pointers" data-section="pointers">7. Pointers</a>
-        <a href="#file" data-section="file">8. File Handling</a>
+        <a href="#intro" data-section="intro"> Introduction</a>
+        <a href="#syntax" data-section="syntax"> Program Structure</a>
+        <a href="#charset" data-section="charset"> Character Set</a>
+        <a href="#datatypes" data-section="datatypes"> Data Types</a>
+        <a href="#control" data-section="control"> Control Statements</a>
+        <a href="#functions" data-section="functions"> Functions</a>
+        <a href="#arrays" data-section="arrays"> Arrays</a>
+        <a href="#pointers" data-section="pointers"> Pointers</a>
+        <a href="#file" data-section="file"> File Handling</a>
 
     </nav>
 
     <main>
         <section id="intro">
-            <h2>1. Introduction to C <span class="progress-check">✔</span></h2>
+            <h2> Introduction to C <span class="progress-check">✔</span></h2>
             <p>C is a general-purpose, procedural programming language developed by Dennis Ritchie in 1972 at Bell
                 Labs to build the UNIX operating system. It’s known for its efficiency, low-level memory access, and
                 clean syntax,
@@ -80,7 +81,7 @@
         </section>
 
         <section id="syntax">
-            <h2>2. C Program Structure <span class="progress-check">✔</span></h2>
+            <h2> C Program Structure <span class="progress-check">✔</span></h2>
             <h4>A simple C program looks like this:</h4><br>
             <div class="code-title">Hello World Example</div>
             <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
@@ -107,8 +108,49 @@ int main() {
             <p>download link for minGw and vs code editor : <a href="https://sourceforge.net/projects/mingw/">minGw</a> and <a href="https://code.visualstudio.com/">Vs Code</a>.</p>
         </section>
 
+        <section id="charset">
+    <h2> Character Set <span class="progress-check">✔</span></h2>
+    <p>The C programming language uses a defined <b>character set</b> to represent source code and data. A character set is the collection of valid characters that C programs can use in identifiers, strings, and character constants. C’s character set is primarily based on the ASCII standard, which has been consistent since C’s creation in 1972 for UNIX development, ensuring portability across systems.</p>
+    <p><b>Components of the C Character Set:</b></p>
+    <ul>
+        <li><b>Letters:</b> Uppercase (A-Z) and lowercase (a-z) for identifiers (e.g., variable names).</li>
+        <li><b>Digits:</b> 0-9 for numeric constants.</li>
+        <li><b>Special Characters:</b> Symbols like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>&</code>, <code>|</code>, <code>!</code>, etc., for operators and punctuation.</li>
+        <li><b>White Spaces:</b> Spaces, tabs (\t), newlines (\n), and carriage returns (\r) for formatting.</li>
+        <li><b>Escape Sequences:</b> Special characters like <code>\n</code> (newline), <code>\t</code> (tab), <code>\'</code> (single quote), and <code>\"</code> (double quote) for use in strings and character literals.</li>
+    </ul>
+    <p><b>Note:</b> C uses the <code>char</code> data type to store characters, typically as 1-byte ASCII values (0 to 127 for signed, 0 to 255 for unsigned). Since the C99 standard, C also supports extended character sets like Unicode via wide characters (<code>wchar_t</code>).</p>
+    <div class="code-title">Character Set Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char letter = 'A';
+    char digit = '5';
+    char symbol = '#';
+    char newline = '\n';
+    
+    printf("Letter: %c\n", letter);
+    printf("Digit: %c\n", digit);
+    printf("Symbol: %c\n", symbol);
+    printf("Escape Sequence (newline): %cHello after newline\n", newline);
+    printf("ASCII value of 'A': %d\n", letter);
+
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Letter: A
+Digit: 5
+Symbol: #
+Escape Sequence (newline): 
+Hello after newline
+ASCII value of 'A': 65
+</code></pre>
+    <p><b>Historical Note:</b> C’s character set, rooted in ASCII, was chosen in the 1970s for simplicity and compatibility with early UNIX systems. The C89 standard formalized ASCII as the default, while C99 introduced support for extended character sets to accommodate internationalization, reflecting C’s evolution to modern needs by 2025.</p>
+</section>
+
         <section id="datatypes">
-    <h2>3. Data Types in C <span class="progress-check">✔</span></h2>
+    <h2> Data Types in C <span class="progress-check">✔</span></h2>
     <p>C provides a set of basic data types for storing different kinds of values. These types are fundamental to C’s efficiency and low-level control, designed to work closely with hardware. Below are the core data types, their typical sizes (on a 64-bit system), and their uses:</p>
     <ul>
         <li><b>int:</b> Stores whole numbers (e.g., 20). Typically 4 bytes, with a range of -2,147,483,648 to 2,147,483,647 (signed).</li>
@@ -147,7 +189,7 @@ Boolean (_Bool): 1, Size: 1 byte
 </section>
 
         <section id="control">
-            <h2>4. Control Statements <span class="progress-check">✔</span></h2>
+            <h2> Control Statements <span class="progress-check">✔</span></h2>
             <p>Use if-else and loops to control program flow:</p>
             <div class="code-title">If-Else Example</div>
             <pre data-lang="C"><button class="copy-btn">Copy</button><code>if (age >= 18) {
@@ -162,7 +204,7 @@ Boolean (_Bool): 1, Size: 1 byte
         </section>
 
         <section id="functions">
-            <h2>5. Functions <span class="progress-check">✔</span></h2>
+            <h2> Functions <span class="progress-check">✔</span></h2>
             <p>Functions make code reusable and organized.</p>
             <pre data-lang="C"><button class="copy-btn">Copy</button><code>int add(int a, int b) {
     return a + b;
@@ -174,7 +216,7 @@ int main() {
         </section>
 
         <section id="arrays">
-            <h2>6. Arrays <span class="progress-check">✔</span></h2>
+            <h2> Arrays <span class="progress-check">✔</span></h2>
             <p>Arrays store multiple values of the same type.</p>
             <pre data-lang="C"><button class="copy-btn">Copy</button><code>int arr[3] = {10, 20, 30};
 for(int i=0; i<3; i++) {
@@ -183,7 +225,7 @@ for(int i=0; i<3; i++) {
         </section>
 
         <section id="pointers">
-            <h2>7. Pointers <span class="progress-check">✔</span></h2>
+            <h2> Pointers <span class="progress-check">✔</span></h2>
             <p>Pointers store memory addresses for advanced programming.</p>
             <pre data-lang="C"><button class="copy-btn">Copy</button><code>int x = 10;
 int *ptr = &x;
@@ -191,7 +233,7 @@ printf("%d", *ptr); // Output: 10</code></pre>
         </section>
 
         <section id="file">
-            <h2>8. File Handling <span class="progress-check">✔</span></h2>
+            <h2> File Handling <span class="progress-check">✔</span></h2>
             <p>Read and write files using file pointers.</p>
             <div class="code-title">Write to File</div>
             <pre data-lang="C"><button class="copy-btn">Copy</button><code>FILE *f = fopen("file.txt", "w");
