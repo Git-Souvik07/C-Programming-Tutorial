@@ -54,6 +54,7 @@
     --footer-text: #94a3b8;
 }
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -72,7 +73,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+/* Header Section */
 header {
     background: var(--header-bg);
     color: white;
@@ -109,7 +110,7 @@ header p {
     color: black;
 }
 
-/* Sidebar Toggle Button */
+/* Sidebar Toggle Button for Mobile */
 .sidebar-toggle {
     position: fixed;
     top: 1rem;
@@ -122,10 +123,10 @@ header p {
     border-radius: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
-    display: none;
+    display: none; /* Initially hidden on desktop */
 }
 
-/* Sidebar */
+/* Sidebar Section */
 .sidebar {
     position: fixed;
     top: 0;
@@ -169,13 +170,14 @@ header p {
 /* Collapsible Links */
 .sidebar-links {
     overflow: hidden;
+    /* Increased max-height for better future-proofing with more links */
     max-height: 0;
     transition: max-height 0.3s ease;
     padding-left: 10px;
 }
 
 .sidebar-links.open {
-    max-height: 500px; /* Allow smooth expand */
+    max-height: 1000px;
 }
 
 /* Sidebar Links */
@@ -205,14 +207,15 @@ header p {
     transform: rotate(-90deg);
 }
 
-/* Main Content */
+/* Main Content Wrapper */
 main {
     margin-left: 280px;
     padding: 1rem;
     max-width: 1000px;
+    margin-right: auto; /* Center the content on larger screens */
 }
 
-/* Sections */
+/* Main Sections */
 section {
     background: var(--section-bg);
     margin-bottom: 2rem;
@@ -228,13 +231,16 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-/* Code Blocks */
+/* Code Blocks Styling */
 .code-title {
     background: var(--code-title-bg);
     color: var(--code-title-text);
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     border-radius: 0.5rem 0.5rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 pre {
@@ -257,9 +263,14 @@ pre {
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Footer */
+.copy-btn:hover {
+    background: var(--copy-btn-hover);
+}
+
+/* Footer Section */
 footer {
     background: var(--footer-bg);
     color: var(--footer-text);
@@ -268,27 +279,31 @@ footer {
     margin-left: 280px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media(max-width:1024px) {
+    /* Show sidebar toggle on smaller screens */
     .sidebar-toggle {
         display: block;
     }
 
+    /* Hide sidebar by default on smaller screens */
     .sidebar {
         transform: translateX(-100%);
     }
 
+    /* Show sidebar when 'open' class is added by JavaScript */
     .sidebar.open {
         transform: translateX(0);
     }
 
+    /* Adjust main content and footer margins */
     main,
     footer {
         margin-left: 0;
     }
 }
 
-/* Fade-in Animation */
+/* Fade-in Animation for Sections */
 @keyframes fadeIn {
     from {
         opacity: 0;

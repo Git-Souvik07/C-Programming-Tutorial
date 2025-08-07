@@ -21,11 +21,11 @@
     </header>
 
     <button class="sidebar-toggle" aria-label="Toggle sidebar navigation">☰ Menu</button>
-    <nav class="sidebar" role="navigation" aria-label="Main navigation">
+   <nav class="sidebar" role="navigation" aria-label="Main navigation">
 
     <!-- C Tutorial -->
     <div class="sidebar-group">
-        <div class="sidebar-title">C Tutorial <span class="arrow">⌄</span></div>
+        <div class="sidebar-title">C Tutorial  <span class="arrow">▼</span></div>
         <div class="sidebar-links">
             <a href="#intro" data-section="intro">Introduction</a>
             <a href="#syntax" data-section="syntax">Program Structure</a>
@@ -35,21 +35,25 @@
             <a href="#constants" data-section="constants">Constants</a>
             <a href="#operators" data-section="operators">Operators</a>
             <a href="#boolean" data-section="boolean">Boolean</a>
-            <a href="#switch" data-section="switch">Switch Statement</a>
+             <a href="#userinput" data-section="userinput">User Input</a>
+        </div>
+    </div>
+    <div class="sidebar-group">
+        <div class="sidebar-title">C Loop Control Structure  <span class="arrow">▼</span></div>
+        <div class="sidebar-links">
+            <a href="#control" data-section="control"> Overview</a>
             <a href="#whileloop" data-section="whileloop">While Loop</a>
-            <a href="#forloop" data-section="forloop">For Loop</a>
+            <a href="#forloop" data-section="forloop">For Loop</a> 
+            <a href="#dowhileloop" data-section="dowhileloop">Do-While Loop</a>
+            <a href="#switch" data-section="switch">Switch Statement</a>
             <a href="#breakcontinue" data-section="breakcontinue">Break and Continue</a>
-            <a href="#strings" data-section="strings">Strings</a>
-            <a href="#userinput" data-section="userinput">User Input</a>
-            <a href="#memoryaddress" data-section="memoryaddress">Memory Address</a>
-            <a href="#arrays" data-section="arrays">Arrays</a>
-            <a href="#pointers" data-section="pointers">Pointers</a>
+
         </div>
     </div>
 
     <!-- C Function -->
     <div class="sidebar-group">
-        <div class="sidebar-title">C Function <span class="arrow">⌄</span></div>
+        <div class="sidebar-title">C Function  <span class="arrow">▼</span></div>
         <div class="sidebar-links">
             <a href="#functions" data-section="functions">Functions</a>
             <a href="#functionparameters" data-section="functionparameters">Function Parameters</a>
@@ -61,7 +65,7 @@
 
     <!-- C Files -->
     <div class="sidebar-group">
-        <div class="sidebar-title">C Files <span class="arrow">⌄</span></div>
+        <div class="sidebar-title">C Files  <span class="arrow">▼</span></div>
         <div class="sidebar-links">
             <a href="#filehandling" data-section="filehandling">File Handling</a>
             <a href="#filemodes" data-section="filemodes">File Modes</a>
@@ -70,6 +74,7 @@
     </div>
 
 </nav>
+
 
     <main>
         <section id="intro">
@@ -484,181 +489,6 @@ Size of _Bool: 1
                 align with modern programming needs, ensuring compatibility and clarity in 2025 applications.</p>
         </section>
 
-        <section id="switch">
-            <h2> Switch Statement <span class="progress-check">✔</span></h2>
-            <p>The <b>switch</b> statement in C provides a way to execute one of many code blocks based on the value of
-                an expression, offering an alternative to multiple <code>if-else</code> statements. Introduced in C’s
-                1972 design for structured control flow in UNIX, it’s efficient for multi-way branching.</p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Syntax:</b> Uses <code>switch(expression)</code> with <code>case</code> labels and an optional
-                    <code>default</code>.</li>
-                <li><b>Break:</b> <code>break</code> exits the switch to prevent fall-through to subsequent cases.</li>
-                <li><b>Expression:</b> Typically an integer or <code>char</code>, evaluated once.</li>
-            </ul>
-            <p><b>Note:</b> The C89 standard formalized switch behavior, ensuring portability. Use <code>break</code> to
-                avoid unintended fall-through, a common pitfall in early C programs.</p>
-            <div class="code-title">Switch Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
-
-int main() {
-    int day = 3;
-    
-    switch (day) {
-        case 1:
-            printf("Monday\n");
-            break;
-        case 2:
-            printf("Tuesday\n");
-            break;
-        case 3:
-            printf("Wednesday\n");
-            break;
-        default:
-            printf("Invalid day\n");
-    }
-    
-    return 0;
-}
-</code></pre>
-            <p><b>Output:</b></p>
-            <pre><code>Wednesday
-</code></pre>
-            <p><b>Historical Note:</b> The switch statement, part of C’s 1972 design, optimized control flow for UNIX
-                utilities. C89 standardized its semantics, making it a staple for multi-way decisions in 2025.</p>
-        </section>
-
-        <section id="whileloop">
-            <h2> While Loop <span class="progress-check">✔</span></h2>
-            <p>The <b>while</b> loop in C repeatedly executes a block of code as long as a condition is true, ideal for
-                indefinite iteration. Designed in 1972 for UNIX, it provides flexible looping with minimal syntax.</p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Syntax:</b> <code>while (condition) { statements; }</code>.</li>
-                <li><b>Condition:</b> Evaluated before each iteration; must be false to exit.</li>
-                <li><b>Infinite Loop:</b> Occurs if the condition never becomes false (e.g., <code>while (1)</code>).
-                </li>
-            </ul>
-            <p><b>Note:</b> The C89 standard ensured consistent loop behavior. Always ensure the condition can become
-                false to avoid infinite loops.</p>
-            <div class="code-title">While Loop Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
-
-int main() {
-    int i = 1;
-    
-    while (i <= 5) {
-        printf("%d ", i);
-        i++;
-    }
-    
-    return 0;
-}
-</code></pre>
-            <p><b>Output:</b></p>
-            <pre><code>1 2 3 4 5
-</code></pre>
-            <p><b>Historical Note:</b> C’s while loop, from 1972, enabled efficient iteration in UNIX. C99’s Boolean
-                enhancements improved condition clarity, maintaining relevance in 2025.</p>
-        </section>
-
-        <section id="forloop">
-            <h2> For Loop <span class="progress-check">✔</span></h2>
-            <p>The <b>for</b> loop in C is used for definite iteration, executing a block of code a specific number of
-                times. Introduced in 1972, it’s compact and widely used for counted loops in C programs.</p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Syntax:</b> <code>for (init; condition; update) { statements; }</code>.</li>
-                <li><b>Components:</b> Initialization, condition check, and update expression.</li>
-                <li><b>Flexibility:</b> Any component can be omitted, but semicolons are required.</li>
-            </ul>
-            <p><b>Note:</b> Standardized in C89, the for loop is ideal for array iteration and precise control, common
-                in modern C applications.</p>
-            <div class="code-title">For Loop Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
-
-int main() {
-    for (int i = 1; i <= 5; i++) {
-        printf("%d ", i);
-    }
-    
-    return 0;
-}
-</code></pre>
-            <p><b>Output:</b></p>
-            <pre><code>1 2 3 4 5
-</code></pre>
-            <p><b>Historical Note:</b> The for loop, part of C’s 1972 design, streamlined iteration for UNIX. C99
-                allowed declarations in the init clause (e.g., <code>for (int i = 0; ...)</code>), enhancing its
-                usability.</p>
-        </section>
-
-        <section id="breakcontinue">
-            <h2> Break and Continue <span class="progress-check">✔</span></h2>
-            <p>The <b>break</b> and <b>continue</b> statements in C control loop and switch execution.
-                <code>break</code> exits a loop or switch, while <code>continue</code> skips to the next loop iteration.
-                Introduced in 1972, they provide precise flow control.</p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Break:</b> Terminates the nearest enclosing loop or switch.</li>
-                <li><b>Continue:</b> Skips the current iteration and proceeds to the next.</li>
-                <li><b>Usage:</b> Common in loops and switch statements for conditional control.</li>
-            </ul>
-            <p><b>Note:</b> C89 standardized their behavior, ensuring consistent use in loops and switches.</p>
-            <div class="code-title">Break and Continue Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
-
-int main() {
-    for (int i = 1; i <= 5; i++) {
-        if (i == 3) continue; // Skip 3
-        if (i == 5) break;   // Exit at 5
-        printf("%d ", i);
-    }
-    
-    return 0;
-}
-</code></pre>
-            <p><b>Output:</b></p>
-            <pre><code>1 2 4
-</code></pre>
-            <p><b>Historical Note:</b> Break and continue, from C’s 1972 design, enabled fine-grained control in UNIX.
-                Their standardized behavior in C89 ensures reliability in 2025.</p>
-        </section>
-
-        <section id="strings">
-            <h2> Strings <span class="progress-check">✔</span></h2>
-            <p>In C, a <b>string</b> is an array of characters terminated by a null character (<code>\0</code>). Strings
-                are used to store text and are manipulated using standard library functions from
-                <code>&lt;string.h&gt;</code>. Introduced in 1972, strings are central to C’s text processing.</p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Declaration:</b> As <code>char</code> arrays (e.g., <code>char str[] = "Hello";</code>).</li>
-                <li><b>Null Termination:</b> Ends with <code>\0</code> to mark the string’s end.</li>
-                <li><b>Library Functions:</b> <code>strlen</code>, <code>strcpy</code>, <code>strcmp</code>, etc.</li>
-            </ul>
-            <p><b>Note:</b> C89 standardized string handling, with C99 adding support for wide characters. Strings
-                require careful memory management to avoid overflows.</p>
-            <div class="code-title">Strings Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-
-int main() {
-    char str[] = "Hello, C!";
-    
-    printf("String: %s\n", str);
-    printf("Length: %zu\n", strlen(str));
-    
-    return 0;
-}
-</code></pre>
-            <p><b>Output:</b></p>
-            <pre><code>String: Hello, C!
-Length: 9
-</code></pre>
-            <p><b>Historical Note:</b> Strings, part of C’s 1972 design, enabled text processing in UNIX. C99’s wide
-                character support expanded their use for internationalization in 2025.</p>
-        </section>
-
         <section id="userinput">
             <h2> User Input <span class="progress-check">✔</span></h2>
             <p>C supports <b>user input</b> through standard library functions like <code>scanf</code> and
@@ -699,111 +529,194 @@ Age: 25, Name: Alice
                 handling.</p>
         </section>
 
-        <section id="memoryaddress">
-            <h2> Memory Address <span class="progress-check">✔</span></h2>
-            <p>In C, a <b>memory address</b> is the location in memory where a variable is stored, accessible via the
-                address-of operator (<code>&</code>). C’s low-level memory access, designed in 1972 for UNIX, makes
-                addresses critical for pointers and dynamic memory.</p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Address Operator:</b> <code>&variable</code> returns the memory address.</li>
-                <li><b>Format:</b> Printed as hexadecimal using <code>%p</code> in <code>printf</code>.</li>
-                <li><b>Use:</b> Essential for pointers and memory management.</li>
-            </ul>
-            <p><b>Note:</b> C89 standardized address operations, ensuring consistent memory handling across platforms.
-            </p>
-            <div class="code-title">Memory Address Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+        
+
+       <section id="control">
+    <h2> Control Statements: Loops <span class="progress-check">✔</span></h2>
+    <p>In C, <b>loops</b> are control structures that allow repeated execution of a block of code, enabling efficient handling of repetitive tasks. Introduced in C’s 1972 design by Dennis Ritchie for UNIX, loops provide powerful mechanisms for iteration, supporting both definite (known number of iterations) and indefinite (condition-based) looping. C offers three main loop types: <code>while</code>, <code>for</code>, and <code>do-while</code>, along with control statements like <code>switch</code>, <code>break</code>, and <code>continue</code> to manage flow.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Purpose:</b> Loops execute code repeatedly based on conditions or counts.</li>
+        <li><b>Types:</b> <code>while</code> for condition-based looping, <code>for</code> for counted loops, and <code>do-while</code> for at least one execution.</li>
+        <li><b>Control:</b> <code>break</code> exits loops, and <code>continue</code> skips iterations.</li>
+    </ul>
+    <p><b>Note:</b> The C89 standard formalized loop behavior, ensuring portability, while C99 enhanced features like loop variable declarations. Loops remain critical for efficient C programming in 2025.</p>
+    <div class="code-title">Simple Loop Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
-    int x = 42;
-    
-    printf("Value of x: %d\n", x);
-    printf("Address of x: %p\n", (void*)&x);
-    
-    return 0;
-}
-</code></pre>
-            <p><b>Output (example address):</b></p>
-            <pre><code>Value of x: 42
-Address of x: 0x7ffee4c4a4ac
-</code></pre>
-            <p><b>Historical Note:</b> Memory addresses, central to C’s 1972 design, enabled low-level control for UNIX.
-                C89’s standardization ensured portability, vital for 2025 system programming.</p>
-        </section>
-
-        <section id="arrays">
-            <h2> Arrays <span class="progress-check">✔</span></h2>
-            <p>An <b>array</b> in C is( Linear Data Structure) a collection of elements of the same data type, stored
-                contiguously in memory. Introduced in 1972, arrays are fundamental for handling multiple values
-                efficiently in C programs.</p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Declaration:</b> <code>type name[size];</code> (e.g., <code>int arr[5];</code>).</li>
-                <li><b>Indexing:</b> Zero-based (e.g., <code>arr[0]</code> to <code>arr[4]</code>).</li>
-                <li><b>Memory:</b> Contiguous allocation, accessible via pointers.</li>
-            </ul>
-            <p><b>Note:</b> C99 introduced variable-length arrays (VLAs), but fixed-size arrays remain common. Always
-                check bounds to avoid errors.</p>
-            <div class="code-title">Arrays Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
-
-int main() {
-    int arr[5] = {10, 20, 30, 40, 50};
-    
-    for (int i = 0; i < 5; i++) {
-        printf("arr[%d] = %d\n", i, arr[i]);
+    int i = 1;
+    while (i <= 3) {
+        printf("Loop iteration %d\n", i);
+        i++;
     }
     
     return 0;
 }
 </code></pre>
-            <p><b>Output:</b></p>
-            <pre><code>arr[0] = 10
-arr[1] = 20
-arr[2] = 30
-arr[3] = 40
-arr[4] = 50
+    <p><b>Output:</b></p>
+    <pre><code>Loop iteration 1
+Loop iteration 2
+Loop iteration 3
 </code></pre>
-            <p><b>Historical Note:</b> Arrays, from C’s 1972 design, enabled efficient data storage in UNIX. C99’s VLAs
-                added flexibility, maintaining arrays’ importance in 2025.</p>
-        </section>
+    <p><b>Historical Note:</b> Loops, a cornerstone of C’s 1972 design, enabled repetitive tasks in UNIX utilities. C89’s standardization and C99’s enhancements ensure their reliability and flexibility in modern applications.</p>
+</section>
 
-        <section id="pointers">
-            <h2> Pointers <span class="progress-check">✔</span></h2>
-            <p>A <b>pointer</b> in C is a variable that stores a memory address, enabling direct memory manipulation.
-                Central to C’s 1972 design for UNIX, pointers are key for dynamic memory and efficient data handling.
-            </p>
-            <p><b>Key Points:</b></p>
-            <ul>
-                <li><b>Declaration:</b> <code>type *name;</code> (e.g., <code>int *ptr;</code>).</li>
-                <li><b>Operators:</b> <code>&</code> (address), <code>*</code> (dereference).</li>
-                <li><b>Use:</b> For arrays, dynamic memory, and function arguments.</li>
-            </ul>
-            <p><b>Note:</b> C89 standardized pointer behavior. Pointers require careful use to avoid errors like null
-                pointer dereferencing.</p>
-            <div class="code-title">Pointers Example</div>
-            <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+<section id="whileloop">
+    <h2> While Loop <span class="progress-check">✔</span></h2>
+    <p>The <b>while</b> loop in C repeatedly executes a block of code as long as a condition is true, ideal for indefinite iteration. Designed in 1972 for UNIX, it provides flexible looping with minimal syntax.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Syntax:</b> <code>while (condition) { statements; }</code>.</li>
+        <li><b>Condition:</b> Evaluated before each iteration; must be false to exit.</li>
+        <li><b>Infinite Loop:</b> Occurs if the condition never becomes false (e.g., <code>while (1)</code>).</li>
+    </ul>
+    <p><b>Note:</b> The C89 standard ensured consistent loop behavior. Always ensure the condition can become false to avoid infinite loops.</p>
+    <div class="code-title">While Loop Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
 
 int main() {
-    int x = 42;
-    int *ptr = &x;
+    int i = 1;
     
-    printf("Value of x: %d\n", x);
-    printf("Address of x: %p\n", (void*)&x);
-    printf("Value via pointer: %d\n", *ptr);
+    while (i <= 5) {
+        printf("%d ", i);
+        i++;
+    }
     
     return 0;
 }
 </code></pre>
-            <p><b>Output (example address):</b></p>
-            <pre><code>Value of x: 42
-Address of x: 0x7ffee4c4a4ac
-Value via pointer: 42
+    <p><b>Output:</b></p>
+    <pre><code>1 2 3 4 5
 </code></pre>
-            <p><b>Historical Note:</b> Pointers, a hallmark of C’s 1972 design, enabled low-level memory control for
-                UNIX. C89’s standardization ensures their reliability in 2025 applications.</p>
-        </section>
+    <p><b>Historical Note:</b> C’s while loop, from 1972, enabled efficient iteration in UNIX. C99’s Boolean enhancements improved condition clarity, maintaining relevance in 2025.</p>
+</section>
+
+<section id="forloop">
+    <h2>4.2. For Loop <span class="progress-check">✔</span></h2>
+    <p>The <b>for</b> loop in C is used for definite iteration, executing a block of code a specific number of times. Introduced in 1972, it’s compact and widely used for counted loops in C programs.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Syntax:</b> <code>for (init; condition; update) { statements; }</code>.</li>
+        <li><b>Components:</b> Initialization, condition check, and update expression.</li>
+        <li><b>Flexibility:</b> Any component can be omitted, but semicolons are required.</li>
+    </ul>
+    <p><b>Note:</b> Standardized in C89, the for loop is ideal for array iteration and precise control, common in modern C applications.</p>
+    <div class="code-title">For Loop Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        printf("%d ", i);
+    }
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>1 2 3 4 5
+</code></pre>
+    <p><b>Historical Note:</b> The for loop, part of C’s 1972 design, streamlined iteration for UNIX. C99 allowed declarations in the init clause, enhancing its usability.</p>
+</section>
+
+<section id="dowhileloop">
+    <h2> Do-While Loop <span class="progress-check">✔</span></h2>
+    <p>The <b>do-while</b> loop in C executes a block of code at least once before checking a condition, repeating as long as the condition is true. Introduced in 1972 for UNIX, it’s ideal for scenarios requiring initial execution, like menu-driven programs.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Syntax:</b> <code>do { statements; } while (condition);</code>.</li>
+        <li><b>Execution:</b> Runs the block first, then evaluates the condition.</li>
+        <li><b>Use Case:</b> Ensures at least one iteration, unlike <code>while</code>.</li>
+    </ul>
+    <p><b>Note:</b> The C89 standard formalized do-while behavior, ensuring portability. Use cautiously to avoid infinite loops.</p>
+    <div class="code-title">Do-While Loop Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+    
+    do {
+        printf("%d ", i);
+        i++;
+    } while (i <= 5);
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>1 2 3 4 5
+</code></pre>
+    <p><b>Historical Note:</b> The do-while loop, from 1972, supported interactive UNIX programs. C99’s Boolean enhancements improved condition clarity, maintaining relevance in 2025.</p>
+</section>
+
+<section id="switch">
+    <h2> Switch Statement <span class="progress-check">✔</span></h2>
+    <p>The <b>switch</b> statement in C executes one of many code blocks based on an expression’s value, offering an alternative to multiple <code>if-else</code> statements. Introduced in 1972, it’s efficient for multi-way branching.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Syntax:</b> Uses <code>switch(expression)</code> with <code>case</code> labels and an optional <code>default</code>.</li>
+        <li><b>Break:</b> <code>break</code> exits the switch to prevent fall-through.</li>
+        <li><b>Expression:</b> Typically an integer or <code>char</code>.</li>
+    </ul>
+    <p><b>Note:</b> C89 standardized switch behavior. Use <code>break</code> to avoid unintended fall-through.</p>
+    <div class="code-title">Switch Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int day = 3;
+    
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        default:
+            printf("Invalid day\n");
+    }
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Wednesday
+</code></pre>
+    <p><b>Historical Note:</b> The switch statement, from 1972, optimized control flow for UNIX. C89’s standardization made it a staple for multi-way decisions in 2025.</p>
+</section>
+
+<section id="breakcontinue">
+    <h2> Break and Continue <span class="progress-check">✔</span></h2>
+    <p>The <b>break</b> and <b>continue</b> statements in C control loop and switch execution. <code>break</code> exits a loop or switch, while <code>continue</code> skips to the next iteration. Introduced in 1972, they provide precise flow control.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Break:</b> Terminates the nearest enclosing loop or switch.</li>
+        <li><b>Continue:</b> Skips the current iteration and proceeds to the next.</li>
+        <li><b>Usage:</b> Common in loops and switch statements for conditional control.</li>
+    </ul>
+    <p><b>Note:</b> C89 standardized their behavior, ensuring consistent use.</p>
+    <div class="code-title">Break and Continue Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        if (i == 3) continue; // Skip 3
+        if (i == 5) break;   // Exit at 5
+        printf("%d ", i);
+    }
+    
+    return 0;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>1 2 4
+</code></pre>
+    <p><b>Historical Note:</b> Break and continue, from 1972, enabled fine-grained control in UNIX. C89’s standardization ensures reliability in 2025.</p>
+</section>
+   
 
 <section id="functions">
     <h2> Functions <span class="progress-check">✔</span></h2>
