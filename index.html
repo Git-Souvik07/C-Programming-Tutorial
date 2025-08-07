@@ -53,15 +53,15 @@
 
     <!-- C Function -->
     <div class="sidebar-group">
-        <div class="sidebar-title">C Function  <span class="arrow">▼</span></div>
+        <div class="sidebar-title"> Functions <span class="arrow">▼</span></div>
         <div class="sidebar-links">
-            <a href="#functions" data-section="functions">Functions</a>
-            <a href="#functionparameters" data-section="functionparameters">Function Parameters</a>
-            <a href="#scope" data-section="scope">Scope</a>
-            <a href="#recursion" data-section="recursion">Recursion</a>
-            <a href="#mathfunctions" data-section="mathfunctions">Math Functions</a>
+            <a href="#functions" data-section="functions"> Functions</a>
+            <a href="#functionparameters" data-section="functionparameters"> Function Parameters</a>
+            <a href="#scope" data-section="scope"> Scope</a>
+            <a href="#recursion" data-section="recursion"> Recursion</a>
+            <a href="#mathfunctions" data-section="mathfunctions"> Math Functions</a>
+            <a href="#functiondeclaration" data-section="functiondeclaration"> Function Declaration</a>
         </div>
-    </div>
 
     <!-- C Files -->
     <div class="sidebar-group">
@@ -593,7 +593,7 @@ int main() {
 </section>
 
 <section id="forloop">
-    <h2>4.2. For Loop <span class="progress-check">✔</span></h2>
+    <h2> For Loop <span class="progress-check">✔</span></h2>
     <p>The <b>for</b> loop in C is used for definite iteration, executing a block of code a specific number of times. Introduced in 1972, it’s compact and widely used for counted loops in C programs.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -719,8 +719,8 @@ int main() {
    
 
 <section id="functions">
-    <h2> Functions <span class="progress-check">✔</span></h2>
-    <p>In C, a <b>function</b> is a block of code that performs a specific task and can be called from other parts of the program. Functions, introduced in C’s 1972 design by Dennis Ritchie for UNIX, promote code modularity and reusability, making programs more organized and efficient.</p>
+    <h2>5.1. Functions <span class="progress-check">✔</span></h2>
+    <p>In C, a <b>function</b> is a block of code that performs a specific task and can be called from other parts of the program. Introduced in C’s 1972 design by Dennis Ritchie for UNIX, functions promote modularity and reusability, making programs more organized.</p>
     <p><b>Key Points:</b></p>
     <ul>
         <li><b>Definition:</b> Defined with a return type, name, and optional parameters (e.g., <code>int add(int a, int b)</code>).</li>
@@ -745,16 +745,16 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>Sum: 8
 </code></pre>
-    <p><b>Historical Note:</b> Functions, a core feature of C’s 1972 design, enabled modular UNIX programming. C89’s function prototypes improved type safety, ensuring reliability in modern C applications.</p>
+    <p><b>Historical Note:</b> Functions, a core feature of C’s 1972 design, enabled modular UNIX programming. C89’s function prototypes improved type safety, ensuring reliability in 2025.</p>
 </section>
 
 <section id="functionparameters">
-    <h2> Function Parameters <span class="progress-check">✔</span></h2>
+    <h2>5.2. Function Parameters <span class="progress-check">✔</span></h2>
     <p><b>Function parameters</b> in C are variables passed to a function to provide input data. Parameters allow functions to operate on dynamic values, a feature integral to C’s 1972 design for flexible UNIX utilities.</p>
     <p><b>Key Points:</b></p>
     <ul>
-        <li><b>Call-by-Value:</b> Parameters are copies of arguments, so changes don’t affect the original.</li>
-        <li><b>Call-by-Reference:</b> Use pointers to modify original values.</li>
+        <li><b>Pass-by-Value:</b> Parameters are copies of arguments, so changes don’t affect the original.</li>
+        <li><b>Pass-by-Reference:</b> Use pointers to modify original values.</li>
         <li><b>Declaration:</b> Specified in the function signature (e.g., <code>void swap(int *a, int *b)</code>).</li>
     </ul>
     <p><b>Note:</b> C89’s function prototypes ensure type checking for parameters, improving safety.</p>
@@ -784,7 +784,7 @@ After swap: x = 20, y = 10
 </section>
 
 <section id="scope">
-    <h2> Scope <span class="progress-check">✔</span></h2>
+    <h2>5.3. Scope <span class="progress-check">✔</span></h2>
     <p><b>Scope</b> in C determines the visibility and lifetime of variables and functions. Defined in C’s 1972 design, scope ensures controlled access to data, preventing unintended modifications in UNIX programs.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -806,7 +806,6 @@ int main() {
     }
     printf("Local scope: %d\n", local);
     printf("Global scope: %d\n", global);
-    // printf("Block scope: %d\n", block); // Error: block not in scope
     
     return 0;
 }
@@ -819,40 +818,8 @@ Global scope: 100
     <p><b>Historical Note:</b> Scope rules, from C’s 1972 design, ensured data isolation in UNIX. C99’s block scope improved flexibility, a feature widely used in 2025.</p>
 </section>
 
-<section id="functiondeclaration">
-    <h2> Function Declaration <span class="progress-check">✔</span></h2>
-    <p>A <b>function declaration</b> in C specifies a function’s name, return type, and parameters without its body, allowing use before definition. Introduced in 1972, declarations were formalized in C89 with prototypes for type safety.</p>
-    <p><b>Key Points:</b></p>
-    <ul>
-        <li><b>Prototype:</b> Declares function signature (e.g., <code>int add(int, int);</code>).</li>
-        <li><b>Definition:</b> Includes the function body, typically after declaration.</li>
-        <li><b>Use:</b> Enables calling functions before their implementation.</li>
-    </ul>
-    <p><b>Note:</b> C89’s prototypes prevent type mismatches, a significant improvement over K&R C.</p>
-    <div class="code-title">Function Declaration Example</div>
-    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
-
-int multiply(int a, int b); // Declaration
-
-int main() {
-    int result = multiply(4, 5);
-    printf("Product: %d\n", result);
-    
-    return 0;
-}
-
-int multiply(int a, int b) { // Definition
-    return a * b;
-}
-</code></pre>
-    <p><b>Output:</b></p>
-    <pre><code>Product: 20
-</code></pre>
-    <p><b>Historical Note:</b> Function declarations, part of C’s 1972 design, supported modular UNIX code. C89’s prototypes ensured type safety, critical for modern C in 2025.</p>
-</section>
-
 <section id="recursion">
-    <h2> Recursion <span class="progress-check">✔</span></h2>
+    <h2>5.4. Recursion <span class="progress-check">✔</span></h2>
     <p><b>Recursion</b> in C occurs when a function calls itself to solve a problem by breaking it into smaller instances. A key feature of C’s 1972 design, recursion is powerful for algorithms like factorials or tree traversals.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -883,7 +850,7 @@ int main() {
 </section>
 
 <section id="mathfunctions">
-    <h2> Math Functions <span class="progress-check">✔</span></h2>
+    <h2>5.5. Math Functions <span class="progress-check">✔</span></h2>
     <p>C provides <b>math functions</b> in the <code>&lt;math.h&gt;</code> library for operations like trigonometry, logarithms, and rounding. Introduced in C’s early days, these functions support numerical computations in UNIX and beyond.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -911,7 +878,39 @@ int main() {
 Power 16.0^2.0: 256.0
 Ceiling of 3.7: 4.0
 </code></pre>
-    <p><b>Historical Note:</b> Math functions, available since C’s 1972 design, supported numerical tasks in UNIX. C99’s expanded <code>&lt;math.h&gt;</code> ensures precision for modern scientific computing in 2025.</p>
+    <p><b>Historical Note:</b> Math functions, available since C’s 1972 design, supported numerical tasks in UNIX. C99’s expanded <code>&lt;math.h&gt;</code> ensures precision for scientific computing in 2025.</p>
+</section>
+
+<section id="functiondeclaration">
+    <h2>5.6. Function Declaration <span class="progress-check">✔</span></h2>
+    <p>A <b>function declaration</b> in C specifies a function’s name, return type, and parameters without its body, allowing use before definition. Introduced in 1972, declarations were formalized in C89 with prototypes for type safety.</p>
+    <p><b>Key Points:</b></p>
+    <ul>
+        <li><b>Prototype:</b> Declares function signature (e.g., <code>int multiply(int, int);</code>).</li>
+        <li><b>Definition:</b> Includes the function body, typically after declaration.</li>
+        <li><b>Use:</b> Enables calling functions before their implementation.</li>
+    </ul>
+    <p><b>Note:</b> C89’s prototypes prevent type mismatches, a significant improvement over K&R C.</p>
+    <div class="code-title">Function Declaration Example</div>
+    <pre data-lang="C"><button class="copy-btn">Copy</button><code>#include &lt;stdio.h&gt;
+
+int multiply(int a, int b); // Declaration
+
+int main() {
+    int result = multiply(4, 5);
+    printf("Product: %d\n", result);
+    
+    return 0;
+}
+
+int multiply(int a, int b) { // Definition
+    return a * b;
+}
+</code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Product: 20
+</code></pre>
+    <p><b>Historical Note:</b> Function declarations, part of C’s 1972 design, supported modular UNIX code. C89’s prototypes ensured type safety, critical for modern C in 2025.</p>
 </section>
 
     </main>

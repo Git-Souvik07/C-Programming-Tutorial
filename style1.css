@@ -170,7 +170,6 @@ header p {
 /* Collapsible Links */
 .sidebar-links {
     overflow: hidden;
-    /* Increased max-height for better future-proofing with more links */
     max-height: 0;
     transition: max-height 0.3s ease;
     padding-left: 10px;
@@ -186,7 +185,7 @@ header p {
     padding: 10px 30px;
     color: var(--sidebar-link);
     text-decoration: none;
-    border-left: 4px solid transparent;
+    border-left: 4px solid solid transparent;
     transition: all 0.3s;
 }
 
@@ -212,7 +211,7 @@ main {
     margin-left: 280px;
     padding: 1rem;
     max-width: 1000px;
-    margin-right: auto; /* Center the content on larger screens */
+    margin-right: auto;
 }
 
 /* Main Sections */
@@ -279,8 +278,29 @@ footer {
     margin-left: 280px;
 }
 
-/* Responsive Design */
-@media(max-width:1024px) {
+/*
+* Responsive Design Breakpoints
+* - Desktop: > 1280px
+* - Tablet: 1025px - 1280px
+* - Mobile: < 1024px
+*/
+
+/* Tablet View (1025px to 1280px) */
+@media(max-width: 1280px) {
+    main,
+    footer {
+        /* Reduce the left margin to make space for the sidebar on tablets */
+        margin-left: 220px;
+    }
+
+    .sidebar {
+        /* Make the sidebar slightly narrower on tablets */
+        width: 220px;
+    }
+}
+
+/* Mobile View (up to 1024px) */
+@media(max-width: 1024px) {
     /* Show sidebar toggle on smaller screens */
     .sidebar-toggle {
         display: block;
@@ -296,7 +316,7 @@ footer {
         transform: translateX(0);
     }
 
-    /* Adjust main content and footer margins */
+    /* Adjust main content and footer margins to fill the screen */
     main,
     footer {
         margin-left: 0;
