@@ -15,10 +15,12 @@
 
 <body>
     <header role="banner">
-        <h1>C Programming Tutorial</h1>
+        <h1> Programming Tutorial</h1>
         <p>Learn C programming step-by-step with examples.</p>
-        <button id="theme-toggle" aria-label="Toggle theme">🌙 Dark Mode</button>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙 Dark Mode</button><br>
+      
     </header>
+    
 
     <button class="sidebar-toggle" aria-label="Toggle sidebar navigation">☰ Menu</button>
    <nav class="sidebar" role="navigation" aria-label="Main navigation">
@@ -53,7 +55,7 @@
 
     <!-- C Function -->
     <div class="sidebar-group">
-        <div class="sidebar-title"> Functions <span class="arrow">▼</span></div>
+        <div class="sidebar-title">C Functions <span class="arrow">▼</span></div>
         <div class="sidebar-links">
             <a href="#functions" data-section="functions"> Functions</a>
             <a href="#functionparameters" data-section="functionparameters"> Function Parameters</a>
@@ -87,35 +89,35 @@
             <h3>Key Features of C :</h3>
             <ul>
                 <li>
-                    Low-Level Access: Direct memory manipulation via pointers.
+                    <b>Low-Level Access:</b> Direct memory manipulation via pointers.
                 </li>
                 <li>
-                    Fast and Efficient: Compiles to machine code, offering performance close to assembly language.
+                    <b>Fast and Efficient:</b> Compiles to machine code, offering performance close to assembly language.
                 </li>
                 <li>
-                    portable: Code runs on various platforms with minimal changes.
+                    <b>portable:</b> Code runs on various platforms with minimal changes.
                 </li>
                 <li>
-                    Structured Programming: Supports functions, loops, conditionals, and modular code.
+                    <b>Structured Programming:</b> Supports functions, loops, conditionals, and modular code.
                 </li>
                 <li>
-                    influential: Many modern languages (C++, Java, Python) derive syntax from C.
+                    <b>influential:</b> Many modern languages (C++, Java, Python) derive syntax from C.
                 </li>
             </ul><br>
 
 
             <h3>Why learn C?</h3>
             <ul>
-                <li>Foundational: Builds a deep understanding of programming concepts like variables, data types, and
+                <li><b>Foundational:</b> Builds a deep understanding of programming concepts like variables, data types, and
                     memory management.</li>
                 <li>
-                    versatile: Used in operating systems (Windows, Linux), embedded systems, and networking.
+                    <b>versatile:</b> Used in operating systems (Windows, Linux), embedded systems, and networking.
                 </li>
                 <li>
-                    Career Benefits: High demand for C developers in system programming and embedded systems.
+                    <b>Career Benefits:</b> High demand for C developers in system programming and embedded systems.
                 </li>
                 <li>
-                    Eases Learning Other Languages: C’s syntax and concepts are a foundation for learning C++, Java, and
+                    <b> Learning Other Languages:</b> C’s syntax and concepts are a foundation for learning C++, Java, and
                     more.
                 </li>
 
@@ -251,9 +253,7 @@ Local variable (salary): 2500.50
 Local variable (grade): B
 Static variable (counter): 1
 </code></pre> <br>
-            <p><b>Historical Note:</b> C’s variable system, introduced in the 1970s, allowed fine-grained control over
-                memory, key for UNIX’s portability. The C89 standard formalized declarations, while C99 added features
-                like variable-length arrays, enhancing flexibility for modern applications in 2025.</p>
+           
         </section>
 
 
@@ -304,9 +304,7 @@ Double: 3.1415926536, Size: 8 bytes
 Character (char): A, Size: 1 byte
 Boolean (_Bool): 1, Size: 1 byte
 </code></pre> <br>
-            <p><b>Note:</b> C’s data types, formalized in the C89 standard, are designed for portability and
-                performance. The <code>sizeof</code> operator reveals type sizes, which may differ across systems,
-                reflecting C’s hardware-dependent roots from its creation in 1972 for UNIX development.</p>
+           
         </section>
 
 
@@ -366,10 +364,7 @@ Preprocessor Constant (PI): 3.14159
 Enum Constant (GREEN): 2
 </code></pre>
             <br>
-            <p><b>Historical Note:</b> Constants in C, rooted in its 1972 design, provided fixed values for UNIX system
-                programming. The C89 standard introduced <code>const</code> for type-safe immutability, while C99 and
-                later standards enhanced enumeration support, ensuring constants remain vital for reliable code in 2025.
-            </p>
+           
         </section>
 
         <section id="operators">
@@ -428,9 +423,7 @@ Bitwise (&): 2
 Assignment (+=): 15
 Ternary (?:): a is greater
 </code></pre>
-            <p><b>Historical Note:</b> C’s operators, rooted in its 1972 design, enabled efficient computation for UNIX.
-                The C89 standard standardized operator precedence and behavior, while C99 introduced features like
-                compound literals, enhancing operator use in modern applications by 2025.</p>
+            
         </section>
 
         <section id="boolean">
@@ -481,9 +474,7 @@ Relational (is_positive): 1
 Logical AND (logical_and): 1
 Size of _Bool: 1
 </code></pre>
-            <p><b>Historical Note:</b> C’s lack of a Boolean type until C99 reflected its 1972 design for simplicity and
-                efficiency in UNIX. The C99 standard introduced <code>_Bool</code> and <code>&lt;stdbool.h&gt;</code> to
-                align with modern programming needs, ensuring compatibility and clarity in 2025 applications.</p>
+           
         </section>
 
         <section id="userinput">
@@ -521,9 +512,7 @@ int main() {
 Enter your name: Alice
 Age: 25, Name: Alice
 </code></pre>
-            <p><b>Historical Note:</b> User input, from C’s 1972 design, enabled interactive UNIX tools. C89’s
-                standardization of <code>scanf</code> ensures portability, though modern C emphasizes safe input
-                handling.</p>
+            
         </section>
 
         
@@ -556,7 +545,7 @@ int main() {
 Loop iteration 2
 Loop iteration 3
 </code></pre>
-    <p><b>Historical Note:</b> Loops, a cornerstone of C’s 1972 design, enabled repetitive tasks in UNIX utilities. C89’s standardization and C99’s enhancements ensure their reliability and flexibility in modern applications.</p>
+ 
 </section>
 
 <section id="whileloop">
@@ -586,7 +575,7 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>1 2 3 4 5
 </code></pre>
-    <p><b>Historical Note:</b> C’s while loop, from 1972, enabled efficient iteration in UNIX. C99’s Boolean enhancements improved condition clarity, maintaining relevance in 2025.</p>
+    
 </section>
 
 <section id="forloop">
@@ -613,7 +602,7 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>1 2 3 4 5
 </code></pre>
-    <p><b>Historical Note:</b> The for loop, part of C’s 1972 design, streamlined iteration for UNIX. C99 allowed declarations in the init clause, enhancing its usability.</p>
+    
 </section>
 
 <section id="dowhileloop">
@@ -643,7 +632,7 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>1 2 3 4 5
 </code></pre>
-    <p><b>Historical Note:</b> The do-while loop, from 1972, supported interactive UNIX programs. C99’s Boolean enhancements improved condition clarity, maintaining relevance in 2025.</p>
+    
 </section>
 
 <section id="switch">
@@ -682,7 +671,7 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>Wednesday
 </code></pre>
-    <p><b>Historical Note:</b> The switch statement, from 1972, optimized control flow for UNIX. C89’s standardization made it a staple for multi-way decisions in 2025.</p>
+   
 </section>
 
 <section id="breakcontinue">
@@ -711,12 +700,12 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>1 2 4
 </code></pre>
-    <p><b>Historical Note:</b> Break and continue, from 1972, enabled fine-grained control in UNIX. C89’s standardization ensures reliability in 2025.</p>
+    
 </section>
    
 
 <section id="functions">
-    <h2>5.1. Functions <span class="progress-check">✔</span></h2>
+    <h2> Functions <span class="progress-check">✔</span></h2>
     <p>In C, a <b>function</b> is a block of code that performs a specific task and can be called from other parts of the program. Introduced in C’s 1972 design by Dennis Ritchie for UNIX, functions promote modularity and reusability, making programs more organized.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -742,11 +731,11 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>Sum: 8
 </code></pre>
-    <p><b>Historical Note:</b> Functions, a core feature of C’s 1972 design, enabled modular UNIX programming. C89’s function prototypes improved type safety, ensuring reliability in 2025.</p>
+ 
 </section>
 
 <section id="functionparameters">
-    <h2>5.2. Function Parameters <span class="progress-check">✔</span></h2>
+    <h2> Function Parameters <span class="progress-check">✔</span></h2>
     <p><b>Function parameters</b> in C are variables passed to a function to provide input data. Parameters allow functions to operate on dynamic values, a feature integral to C’s 1972 design for flexible UNIX utilities.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -777,11 +766,11 @@ int main() {
     <pre><code>Before swap: x = 10, y = 20
 After swap: x = 20, y = 10
 </code></pre>
-    <p><b>Historical Note:</b> Parameters, part of C’s 1972 design, enabled flexible function calls in UNIX. C89’s prototypes ensured type-safe parameter passing, critical for 2025 applications.</p>
+   
 </section>
 
 <section id="scope">
-    <h2>5.3. Scope <span class="progress-check">✔</span></h2>
+    <h2> Scope <span class="progress-check">✔</span></h2>
     <p><b>Scope</b> in C determines the visibility and lifetime of variables and functions. Defined in C’s 1972 design, scope ensures controlled access to data, preventing unintended modifications in UNIX programs.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -812,11 +801,11 @@ int main() {
 Local scope: 50
 Global scope: 100
 </code></pre>
-    <p><b>Historical Note:</b> Scope rules, from C’s 1972 design, ensured data isolation in UNIX. C99’s block scope improved flexibility, a feature widely used in 2025.</p>
+   
 </section>
 
 <section id="recursion">
-    <h2>5.4. Recursion <span class="progress-check">✔</span></h2>
+    <h2> Recursion <span class="progress-check">✔</span></h2>
     <p><b>Recursion</b> in C occurs when a function calls itself to solve a problem by breaking it into smaller instances. A key feature of C’s 1972 design, recursion is powerful for algorithms like factorials or tree traversals.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -843,11 +832,11 @@ int main() {
     <p><b>Output:</b></p>
     <pre><code>Factorial of 5: 120
 </code></pre>
-    <p><b>Historical Note:</b> Recursion, supported since C’s 1972 design, enabled elegant solutions in UNIX. C89’s standardization ensured stack safety, vital for recursive algorithms in 2025.</p>
+   
 </section>
 
 <section id="mathfunctions">
-    <h2>5.5. Math Functions <span class="progress-check">✔</span></h2>
+    <h2> Math Functions <span class="progress-check">✔</span></h2>
     <p>C provides <b>math functions</b> in the <code>&lt;math.h&gt;</code> library for operations like trigonometry, logarithms, and rounding. Introduced in C’s early days, these functions support numerical computations in UNIX and beyond.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -875,11 +864,11 @@ int main() {
 Power 16.0^2.0: 256.0
 Ceiling of 3.7: 4.0
 </code></pre>
-    <p><b>Historical Note:</b> Math functions, available since C’s 1972 design, supported numerical tasks in UNIX. C99’s expanded <code>&lt;math.h&gt;</code> ensures precision for scientific computing in 2025.</p>
+
 </section>
 
 <section id="functiondeclaration">
-    <h2>5.6. Function Declaration <span class="progress-check">✔</span></h2>
+    <h2> Function Declaration <span class="progress-check">✔</span></h2>
     <p>A <b>function declaration</b> in C specifies a function’s name, return type, and parameters without its body, allowing use before definition. Introduced in 1972, declarations were formalized in C89 with prototypes for type safety.</p>
     <p><b>Key Points:</b></p>
     <ul>
@@ -907,7 +896,7 @@ int multiply(int a, int b) { // Definition
     <p><b>Output:</b></p>
     <pre><code>Product: 20
 </code></pre>
-    <p><b>Historical Note:</b> Function declarations, part of C’s 1972 design, supported modular UNIX code. C89’s prototypes ensured type safety, critical for modern C in 2025.</p>
+ 
 </section>
 
     </main>

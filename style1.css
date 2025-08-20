@@ -93,6 +93,7 @@ header p {
     opacity: 0.9;
 }
 
+
 #theme-toggle {
     margin-top: 1rem;
     background: var(--sidebar-active-border);
@@ -108,6 +109,10 @@ header p {
 #theme-toggle:hover {
     background: var(--sidebar-active-text);
     color: black;
+}
+.page {
+ padding: auto;
+ 
 }
 
 /* Sidebar Toggle Button for Mobile */
